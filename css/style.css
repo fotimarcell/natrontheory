@@ -199,9 +199,8 @@ body {
     }
 
     .csik {
-        margin: 0;
         min-height: 0;
-        max-width: 800px;
+        max-width: inherit;
     }
 
     .atracsos {
@@ -218,6 +217,10 @@ body {
         min-height: 0;
     }
 
+    .szurkecsik {
+        padding: 20px;
+        min-height: 0;
+    }
     .fofofotitle {
         font-size: 36px;
     }
@@ -228,5 +231,7 @@ body {
     .szep-gomb {
         margin: 20px 20px 0 20px;
     }
-    
+    .padder {
+        padding: 20px;
+    }    
 }
