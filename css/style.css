@@ -67,12 +67,14 @@
     }
         .atracsos {
         margin: 0;
-        padding: 1em;
+        padding: 2em;
     }
     .mainszoveg {
         line-height: 1.5em;
     }
-
+    .maincsik {
+        padding: 20px;
+    }
 
 body {
     background-color: #fafafa;
