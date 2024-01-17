@@ -67,9 +67,11 @@
     }
         .atracsos {
         margin: 0;
-        padding: 2em;
+        padding: 1em;
     }
-}
+    .mainszoveg {
+        line-height: 1.5em;
+    }
 
 
 body {
