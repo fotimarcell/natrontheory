@@ -166,6 +166,12 @@ body {
 }
 
 
+#videobackground {
+    /* Helyezze a videót a háttérre */
+    background-size: cover;
+    background-position: center center;
+    flex-basis: 50%;
+}
 #videobackground video {
     top: 0;
     left: 0;
@@ -174,7 +180,7 @@ body {
     object-fit: cover;
     /* Az ablak méretéhez igazítja a videót */
     z-index: -1;
-    /* Helyezze a videót a háttérre */
+    vertical-align: bottom;
 }
 
 
