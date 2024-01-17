@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Natron Theory</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
+    <script src="script/utility.js"></script>
+</head>
+
+<body>
+    <div id="top" class="maincsik mobil-margok" style="background-image: url('img/main/sivatag.jpg');">
+        <div class="atracsos">
+            <div class="title" style="font-size: 50px;">The Natron Theory</div>
+            <div class="mainszoveg">Once upon a time there was a desert. And in this desert, where logically nothing should
+                happen, here humanity made its most important steps in development. </div>
+            <button class="szep-gomb" onclick="ugrasDivre('tekercs')">Next</button>
+        </div>
+    </div>
+    <div id="tekercs" class="maincsik mobil-margok" style="background-image: url('img/main/tekercs.jpg');">
+        <div class="atracsos">
+            <div class="title">In the beginning there was ... natron</div>
+            <div class="mainszoveg">
+                Natron is a kind of salt which is abundant in the Nile walley. People have been hand-picking and
+                collecting it in baskets since ancient times.
+
+                Ancient Egyptians used natron for at least ten different purposes: 
+
+                <ul>
+                    <li>Washing clothes, Drying food, Medical treatment, Mouthwashing, Ceramics, mainszovegile dyeing,
+                        Insepticide,
+                        Conserve papyrus, Cosmetic and...</li>
+
+                    <li>Mummification, of course</li>
+                </ul>
+            </div>
+            <button class="szep-gomb" onclick="ugrasDivre('glass')">Next</button>
+        </div>
+    </div>
+    <div id="glass" class="maincsik mobil-margok" style="background-image: url('img/main/glass.jpg');">
+        <div class="atracsos">
+            <div class="title">Oh, and one more thing!</div>
+            <div class="mainszoveg">Natron was also used to create glass. So called "natron glass", which is still the most
+                common format of glass we use today.
+                In fact, this happened way before the Egyptians even dreamed of having an empire. Between 5000 and 4000
+                BC they already created small glass amulets and glass beads*.</div>
+            <button class="szep-gomb" onclick="ugrasDivre('uveges')">Next</button>
+            <div class="mainszoveg">*Badarian culture</div>
+        </div>
+    </div>
+    <div id="uveges" class="maincsik mobil-margok" style="background-image: url('img/main/uveges.jpg');">
+        <div class="atracsos">
+            <div class="title">What is glass, and why is it important?</div>
+            <div class="mainszoveg">Natron glass is nothing more than natron, sand and limestone "cooked" together on 851
+                degrees Celsius.
+                Which means ​Egyptians were able to melt natron since the beginning of time**.
+            </div>
+            <button class="szep-gomb" onclick="ugrasDivre('kerdes')">Next</button>
+            <div class="mainszoveg">**It's a - so called - "fact"</div>
+        </div>
+    </div>
+    <div id="kerdes" class="maincsik mobil-margok">
+        <div class="atracsos">
+            <div style="font-size: large;">Now tell me straight to my face, are you seriously saying that normal,
+                healthy
+                ancient men didn't try melting stones with molten natron, but only bothered with sand?</div>
+
+            <style>
+                /* Alap gomb stílusa */
+                #Nogomb {
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                    /* CSS átmenet a háttérszínre */
+                }
+
+                /* Gomb szürke háttérszínre változik, amikor fölé húzzuk az egeret */
+                #Nogomb:hover {
+                    color: darkgray;
+                    background-color: gray;
+                }
+
+                #targetButton {
+                    transition: transform 0.3s ease;
+                }
+
+                #targetButton.enlarged {
+                    transform: scale(1.5);
+                    /* 1.5-szörösére növeli a méretét */
+                }
+            </style>
+            <button class="szep-gomb" id="Nogomb">Nope, they didn't</button>
+            <button class="szep-gomb" id="targetButton"
+                onclick="document.getElementById('rejtett').style.display='block';document.getElementById('domino').style.display='block'">
+                Yes, they tried it!</button>
+            <script>
+                // JavaScript kód itt
+
+                // Létrehozzuk a gomb elem referenciáját
+                var button = document.getElementById("Nogomb");
+
+                // A gombra hover eseményfigyelőt hozunk létre
+                button.addEventListener("mouseover", function () {
+                    // Amikor az egér közelít a gombhoz, letiltjuk azt
+                    button.disabled = true;
+                });
+
+                // A gombra hover elhagyása eseményfigyelőt hozunk létre
+                button.addEventListener("mouseout", function () {
+                    // Amikor az egér elmegy a gomb elől, engedélyezzük azt
+                    button.disabled = false;
+                });
+                button.addEventListener('mouseenter', function () {
+                    document.getElementById('targetButton').classList.add('enlarged');
+                });
+
+                button.addEventListener('mouseleave', function () {
+                    document.getElementById('targetButton').classList.remove('enlarged');
+                });
+
+            </script>
+            <div id="rejtett" style="display: none; margin-top: 50px;">
+                <div style="font-size: x-large;">Of course they tried!<br />
+                    And what did they find?</div>
+                <button class="szep-gomb" onclick="ugrasDivre('domino')">Next</button>
+            </div>
+        </div>
+    </div>
+    <div id="domino" class="maincsik mobil-margok" style="background-image: url('img/main/domino1.jpg');display: none;">
+        <div class="atracsos">
+            <div class="title">They found a bunch of dominos that can be knocked over</div>
+            <div class="mainszoveg">Dominos like "granite being so hard that it can't be damaged by any everyday chemical"
+            or how our ancestors transported stone blocks weighing several hundred tons over
+                hundreds of miles. <br/>
+            </div>
+            <button class="szep-gomb" onclick="window.location.href = 'granite.html'">Start Domino Effect</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
