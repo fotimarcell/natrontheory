@@ -94,7 +94,7 @@
             </style>
             <button class="szep-gomb" id="Nogomb">Nope, they didn't</button>
             <button class="szep-gomb" id="targetButton"
-                onclick="document.getElementById('rejtett').style.display='block';document.getElementById('domino').style.display='block'">
+                onclick="document.getElementById('rejtett').style.display='block';document.getElementById('domino').style.display='block';ugrasDivre('rejtett')">
                 Yes, they tried it!</button>
             <script>
                 // JavaScript kód itt
@@ -125,7 +125,6 @@
             <div id="rejtett" style="display: none; margin-top: 50px;">
                 <div style="font-size: x-large;">Of course they tried!<br />
                     And what did they find?</div>
-                <button class="szep-gomb" onclick="ugrasDivre('domino')">Next</button>
             </div>
         </div>
     </div>
