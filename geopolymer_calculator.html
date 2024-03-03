@@ -36,7 +36,7 @@
                     because
                     the field is still in development (=chaos). One of the leading scientists is Waltraud M. Kriven,
                     we'll use
-                    her formula on this page for our calculations. This:
+                    her formula on this page for our calculations. This one:
                     <div style="display: inline; font-size: larger; margin: 1em">
                         M&bull;AlO<sub>2</sub>&bull;2*SiO<sub>2</sub>&bull;5.5*H<sub>2</sub>O</div>
                     Which looks absolutely crazy. Let me explain it in pure English.<br><br>
@@ -93,7 +93,7 @@
                         <li>Water (H2O): 18</li>
                         <li>SiO2: 60</li>
                     </ul>
-            </div>
+                </div>
             </div>
             <div class="image baljobbkeret" style="background-image: url('img/waterglass/3dprint.jpg');">
             </div>
@@ -103,17 +103,26 @@
                 <div class="padder">
                     <p>Silicone-water ratio</p>
 
-                        Let's correct your waterglass solution's silicon content first. <br>
-                        What is the mass percentage of the waterglass solution you bought?<br>
-                        (It's on the label of the bottle.)<br>
+                    Let's correct your waterglass solution's silicon content first. <br>
+                    What is the mass percentage of the waterglass solution you bought?<br>
+                    (It's on the label of the bottle.)<br>
+                    <div>
                         <input type="text" value="36" id="waterglasspercentage"
-                                    style="width: 40px; text-align: right;">
+                            style="width: 40px; text-align: right; display: inline;"> %
+                    </div>
 
                     <button class="szep-gomb" onclick="
                     document.getElementById('waterglassresult').style.display = 'block';
                     document.getElementById('catlittercalc').style.display = 'inline';
                     document.getElementById('blabla').style.display = 'none';
                     wgpercent=document.getElementById('waterglasspercentage').value;
+
+                    helyese=parseFloat(wgpercent);
+                    if (!(!isNaN(helyese) && helyese >= 1 && helyese <= 55)) {
+                        alert('Number must be between 1 and 55.');
+                        return;
+                    }
+
                     document.getElementById('wg1').innerHTML = wgpercent
                     document.getElementById('wg2').innerHTML = wgpercent
                     document.getElementById('wg3').innerHTML = wgpercent
@@ -141,11 +150,12 @@
                     ">Calculate</button>
                     <br>
                     <div style="display: none; text-align: left;" id="waterglassresult">
-                        This means you have <label id="wg1"></label> grams of waterglass dissolved in <label id="wasser1"></label> grams of
+                        This means you have <label id="wg1"></label> g of waterglass dissolved in <label
+                            id="wasser1"></label> g of
                         water.<br>
-                        <label id="wasser2"></label> grams of water means <label id="wasser3"></label> / 18 = 
+                        <label id="wasser2"></label> g of water means <label id="wasser3"></label> / 18 =
                         <b><label id="wassermol"></label> mol</b><br>
-                        <label id="wg2">36</label> grams of waterglass (Na2SiO3) means <label id="wg3"></label> / 122 = 
+                        <label id="wg2">36</label> g of waterglass (Na2SiO3) means <label id="wg3"></label> / 122 =
                         <b><label id="wgmol"></label> mol</b><br>
                         The Si : Water ratio in this solution is <b><label id="molratio"></label></b> instead of 5.5!
                     </div>
@@ -158,11 +168,12 @@
             <div class="text baljobbkeret">
                 <div class="padder">
                     <p>Cat litter</p>
-                    In order to bring the waterglass solution's H2O : Na2SiO3 ratio to 5.5, we need to add some 
+                    In order to bring the waterglass solution's H2O : Na2SiO3 ratio to 5.5, we need to add some
                     SiO2 to the solution. We'll need amorphous silicone as it is ready to dissolve in water. <br><br>
                     This is the part where cat litter comes into the picture. Yes. Those small white balls.<br><br>
-                    Cat litter is 100% SiO2, so we can simply add it to the waterglass solution. We only need to calculate 
-                    the correct amount of it. 
+                    Cat litter is 100% SiO2, so we can simply add it to the waterglass solution. We only need to
+                    calculate
+                    the correct amount of it.
 
                 </div>
             </div>
@@ -174,12 +185,15 @@
                 <div class="padder">
                     <p>Adding more SiO2 to the solution</p>
                     <div id="blabla">This is a calculation area. Press the button above to see te results.</div>
-                    <div style="display: none;" id="catlittercalc">We'll need <label id="wassermol2"></label> mol / 5.5 = 
-                    <b><label id="wgamount"></label> mol SiO2</b> instead of the original <label id="wgmol2"></label> mol 
-                    into the solution.<br><br>
-                    That means additional <label id="addmol"></label> mol or <label id="addmol2"></label> x 60 = 
-                    <b><label id="catlitter"></label> grams </b>of cat litter to be added to each <b>100 g</b> of the solution to reach the necessary 5.5 Si / H2O ratio.
-                </div>
+                    <div style="display: none;" id="catlittercalc">We'll need <label id="wassermol2"></label> mol / 5.5
+                        =
+                        <b><label id="wgamount"></label> mol </b>SiO2 instead of the original <label
+                            id="wgmol2"></label> mol
+                        into the solution.<br><br>
+                        That means additional <label id="addmol"></label> mol or <label id="addmol2"></label> x 60 =
+                        <b><label id="catlitter"></label> g </b>of cat litter to be added to each <b>100 g</b> of the
+                        solution to reach the necessary 5.5 Si / H2O ratio.
+                    </div>
                 </div>
             </div>
             <div class="image baljobbkeret" style="background-image: url('img/waterglass/falazas.jpg');">
