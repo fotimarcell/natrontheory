@@ -60,7 +60,7 @@
                     Now we can try decode the necessary parameters of our mixing.
                 </div>
             </div>
-            <div class="image baljobbkeret" style="background-image: url('img/waterglass/chrystal.jpg');"></div>
+            <div class="image baljobbkeret" style="background-image: url('img/geopolymer/ocean.webp');"></div>
         </div>
         <div class="row reverse">
             <div class="text baljobbkeret">
@@ -72,36 +72,44 @@
                         <li>We need to have 5.5 times more water than silicon (Si) atoms</li>
                         <li>We need an alkaline (Na or K) pair to each and every Al atom</li>
                     </ol>
-                    <p>Or in short</p>
-                    1 silicon,
-                    2 aluminum,
-                    2 sodium (or potassium),
-                    5.5 water
+                    <p>Or in short we need</p>
+                    1 part silicon,
+                    2 part aluminum,
+                    2 part "M",
+                    5.5 part water
 
                 </div>
             </div>
-            <div class="image baljobbkeret" style="background-image: url('img/waterglass/3dprint.jpg');">
+            <div class="image baljobbkeret" style="background-image: url('img/geopolymer/printing.jpg');">
             </div>
         </div>
         <div class="row">
             <div class="text baljobbkeret">
                 <div class="padder">
                     <p>Molar masses</p>
-                    These are some constants we'll use throughout the calculations:
+                    Molar mass it the weight of a single molecule. You can calculate it by reading the molar masses of
+                    individual atoms from the periodic table and adding them thogether. <br><br>
+                    <div stlye="display: inline">Here is a simple example: H<sub>2</sub>O molar mass. <br>Hydrogen: 1. Oxigen: 16. H<sub>2</sub>O = 2 x 1 + 16 = 18
+                    </div>
+                    We'll use these molar masses later on:
                     <ul style="text-align: left;">
-                        <li>Waterglass (Na2SiO3): 122</li>
-                        <li>Water (H2O): 18</li>
-                        <li>SiO2: 60</li>
+                        <li>Water (H<sub>2</sub>O) molar mass: <span style="color:red">18</span></li>
+                        <li>Waterglass (Na<sub>2</sub>SiO<sub>3</sub>) molar mass: <span style="color:red">122</span></li>
+                        <li>SiO<sub>2</sub> molar mass: <span style="color:red">60</span></li>
                     </ul>
                 </div>
             </div>
             <div class="image baljobbkeret" style="background-image: url('img/geopolymer/geohouse.jpg');">
             </div>
         </div>
+        <div class="csik szurkecsik">
+            <div class="title" style="font-size: 50px;">Step One</div>
+            <div class="title">Setting H<sub>2</sub>O / Si molecular ratio to 5.5</div>
+        </div>
         <div class="row reverse">
             <div class="text baljobbkeret">
                 <div class="padder">
-                    <p>Silicone-water ratio</p>
+                    <p>Water-Silicon molecular ratio</p>
 
                     Let's correct your waterglass solution's silicon content first. <br>
                     What is the mass percentage of the waterglass solution you bought?<br>
@@ -134,8 +142,10 @@
                     wgmol=wgpercent/122;
                     document.getElementById('wassermol').innerHTML = wassermol.toFixed(2);
                     document.getElementById('wassermol2').innerHTML = wassermol.toFixed(2);
+                    document.getElementById('wassermol3').innerHTML = wassermol.toFixed(2);
                     document.getElementById('wgmol').innerHTML = wgmol.toFixed(2);
                     document.getElementById('wgmol2').innerHTML = wgmol.toFixed(2);
+                    document.getElementById('wgmol3').innerHTML = wgmol.toFixed(2);
                     molratio=wassergram/18/(wgpercent/122);
                     document.getElementById('molratio').innerHTML = molratio.toFixed(2);
                     wgamount=wassermol/5.5;
@@ -150,14 +160,15 @@
                     ">Calculate</button>
                     <br>
                     <div style="display: none; text-align: left;" id="waterglassresult">
-                        This means you have <label id="wg1"></label> g of waterglass dissolved in <label
-                            id="wasser1"></label> g of
+                        This means you have <b><label id="wg1"></label> g</b> of waterglass dissolved in <b><label
+                            id="wasser1"></label> g</b> of
                         water.<br>
-                        <label id="wasser2"></label> g of water means <label id="wasser3"></label> / 18 =
+                        <label id="wasser2"></label> g of water means <label id="wasser3"></label> / <span style="color:red">18</span> =
                         <b><label id="wassermol"></label> mol</b><br>
-                        <label id="wg2">36</label> g of waterglass (Na2SiO3) means <label id="wg3"></label> / 122 =
+                        <label id="wg2">36</label> g of  waterglass means <label id="wg3"></label> / <span style="color:red">122</span> =
                         <b><label id="wgmol"></label> mol</b><br>
-                        The Si : Water ratio in this solution is <b><label id="molratio"></label></b> instead of 5.5!
+                        The Si : Water molecular ratio in this solution is <label id="wassermol3"></label> / <label id="wgmol3"></label> = <b><label id="molratio"></label></b><br>
+                        Instead of 5.5!
                     </div>
                 </div>
             </div>
@@ -168,13 +179,13 @@
             <div class="text baljobbkeret">
                 <div class="padder">
                     <p>Cat litter</p>
-                    In order to bring the waterglass solution's H2O : Na2SiO3 ratio to 5.5, we need to add some
-                    SiO2 to the solution. We'll need amorphous silicone as it is ready to dissolve in water. <br><br>
+                    <div stlye="display: inline">To bring the waterglass solution's H<sub>2</sub>O : Si ratio to 5.5, we need to add some
+                    more silicon to the solution. But how? 
+                    We cannot simply drop sand into the water and hope it will dissolve. It will not. 
+                    <br><br>We need amorphous silicon as it is ready to dissolve in water.
                     This is the part where cat litter comes into the picture. Yes. Those small white balls.<br><br>
-                    Cat litter is 100% SiO2, so we can simply add it to the waterglass solution. We only need to
-                    calculate
-                    the correct amount of it.
-
+                    Cat litter is 100% amorphous SiO<sub>2</sub>, so we can simply add it to the waterglass solution in order to increase our silicon content. 
+                </div>        
                 </div>
             </div>
             <div class="image baljobbkeret" style="background-image: url('img/geopolymer/catlitter.jpg');">
@@ -183,14 +194,14 @@
         <div class="row reverse">
             <div class="text baljobbkeret">
                 <div class="padder">
-                    <p>Adding more SiO2 to the solution</p>
+                    <p>Adding more silicon to the solution</p>
                     <div id="blabla">This is a calculation area. Press the button above to see the results.</div>
                     <div style="display: none;" id="catlittercalc">We'll need <label id="wassermol2"></label> mol / 5.5
                         =
-                        <b><label id="wgamount"></label> mol </b>SiO2 instead of the original <label
+                        <b><label id="wgamount"></label> mol </b>SiO<sub>2</sub> instead of the original <label
                             id="wgmol2"></label> mol
                         into the solution.<br><br>
-                        That means additional <label id="addmol"></label> mol or <label id="addmol2"></label> x 60 =
+                        That means additional <label id="addmol"></label> mol or <label id="addmol2"></label> x <span style="color:red">60</span> =
                         <b><label id="catlitter"></label> g </b>of cat litter to be added to each <b>100 g</b> of the
                         solution to reach the necessary 5.5 Si / H2O ratio.<br><br>
                         Mix it well then go to sleep. We'll continue tomorrow.
@@ -202,7 +213,8 @@
         </div>
     </div>
     <div class="dominocsik">
-        <button class="szep-gomb" onclick="window.location.href = 'alkali.html'">Step 2: Calculating Alkali Activation</button>
+        <button class="szep-gomb" onclick="window.location.href = 'alkali.html'">Step 2: Calculating Alkali
+            Activation</button>
     </div>
     <iframe src="footer.html" class="menuframe"></iframe>
 
