@@ -255,3 +255,59 @@ body {
         padding: 20px;
     }    
 }
+
+sup {display: inline;}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Eltávolítja a dupla szegélyeket */
+    margin: 20px 0; /* Távolság a táblázat és egyéb elemek között */
+  }
+  
+  th, td {
+    padding: 10px; /* Cellák közötti tér */
+    border: 1px solid #ddd; /* Szegély színe */
+    text-align: left; /* Szöveg igazítása */
+  }
+  
+  th {
+    background-color: #f2f2f2; /* Fejléc háttérszíne */
+  }
+  
+  tr:hover {
+    background-color: #e8e8e8; /* Hover effektus sorokra */
+  }
+  
+  @media screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+  
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+  
+    tr { border: 1px solid #ccc; }
+  
+    td {
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+    }
+  
+    td:before {
+      /* Az oszlop neve a mobil nézetben */
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      /* További stílusok */
+    }
+  }
+  
