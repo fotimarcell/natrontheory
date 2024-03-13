@@ -266,7 +266,7 @@ table {
   }
   
   th, td {
-    padding: 10px; /* Cellák közötti tér */
+    padding: 3px; /* Cellák közötti tér */
     border: 1px solid #ddd; /* Szegély színe */
     text-align: left; /* Szöveg igazítása */
   }

@@ -50,7 +50,8 @@
             <div class="text baljobbkeret">
                 <div class="padder">
                     <p>Decyphering the formula</p>
-                    First of all, that capital M at the beginning of the formula is not a chemical element you never heard of
+                    First of all, that capital M at the beginning of the formula is not a chemical element you never
+                    heard of
                     but a placeholder for either sodium (Na) or potassium (K).
                     Both can be used as alkali activators.
                     <br><br>
@@ -84,12 +85,13 @@
             <div class="text baljobbkeret">
                 <div class="padder">
                     <p>Counting individual atoms?</p>
-                    As we cannot count individual atoms or molecules by pointing at them with a finger, 
+                    As we cannot count individual atoms or molecules by pointing at them with a finger,
                     we'll do the second best thing: we'll calculate the number of atoms in a material by knowig the
                     mass of both the whole and the atomic/molar mass of the individual atoms/molecules.
                     <br><br>
-                    You can get the exact number of molecules by simply dividing the weight of your material in grams with 
-                    the molar mass of the given chemical. You'll get the result in "mol", or molar mass. 
+                    You can get the exact number of molecules by simply dividing the weight of your material in grams
+                    with
+                    the molar mass of the given chemical. You'll get the result in "mol", or molar mass.
                 </div>
             </div>
             <div class="image baljobbkeret" style="background-image: url('img/geopolymer/atom.jpg');">
@@ -100,13 +102,15 @@
                 <div class="padder">
                     <p>Calculating water's molecular mass</p>
                     <div style="display: inline;">
-                        Atomic mass is the number of protons + neutrons in an atom, as both neutron's and proton's mass is 1
+                        Atomic mass is the number of protons + neutrons in an atom, as both neutron's and proton's mass
+                        is 1
                         by definition. molecular mass is the sum of atomic masses in a molecule.
                         <br><br>
                         <b>Hydrogen (H)</b> has 1 proton
                         only, so it's atomic mass is <b>1</b>.<br>
                         <b>Oxigen (O)</b> has 8 protons + 8 neutrons, so it's atomic mass is <b>16</b>.<br><br>
-                        What is the molecular mass of <b>water (H<sub>2</sub>O)</b> then? <br>Well, it is <b>1 + 1 + 16 = 18</b>
+                        What is the molecular mass of <b>water (H<sub>2</sub>O)</b> then? <br>Well, it is <b>1 + 1 + 16
+                            = 18</b>
                     </div>
                 </div>
             </div>
@@ -118,21 +122,22 @@
                 <div class="padder">
                     <p>Molecular masses</p>
 
-                    We'll use these precalculated molecular masses below, try to rememberr these (or scroll up here to check them):
-                    <table >
+                    We'll use these precalculated molecular masses below, try to rememberr these (or scroll up here to
+                    check them):
+                    <table>
                         <tr>
-                            <th>Atomic masses</th>
-                            <th>Molecular masses</th>
+                            <th>Atomic masses (atoms)</th>
+                            <th>Molecular masses (molecules)</th>
                         </tr>
                         <tr>
                             <td>K (potassium): 39</td>
                             </td>
-                            <td></td>
+                            <td>KOH: 56</td>
                         </tr>
                         <tr>
                             <td>Na (sodium): 23</td>
-                            <td>Waterglass (Na<sub>2</sub>SiO<sub>3</sub>): <span style="color:red">122</span>
-                            </tr>
+                            <td>NaOH: 40</td>
+                        </tr>
                         <tr>
                             <td>Si (silocon): 28</td>
                             <td>SiO<sub>2</sub>: <span style="color:red">60</span></td>
@@ -145,6 +150,11 @@
                             <td>O (oxygen): 16</td>
                             <td>Water (H<sub>2</sub>O): <span style="color:red">18</span></td>
                         </tr>
+                        <tr>
+                            <td></td>
+                            <td>Waterglass (Na<sub>2</sub>SiO<sub>3</sub>): <span style="color:red">122</span>
+                        </tr>
+                        <tr>
                     </table>
                 </div>
             </div>
@@ -153,75 +163,94 @@
         </div>
         <div class="csik szurkecsik">
             <div class="title" style="font-size: 50px;">Step One</div>
-            <div class="title">Setting H<sub>2</sub>O / Si molecular ratio</div>
+            <div class="title">Calculating 1 part (1 mol) aluminum</div>
         </div>
         <div class="row reverse">
             <div class="text baljobbkeret">
                 <div class="padder">
-                    <p>Water-Silicon molecular ratio</p>
-                    <div stlye="display: inline">According to the formula above, we need 2 silicon atoms to meet 5.5
-                        water molecules, or basically Si : H<sub>2</sub>O = 5.5 / 2 = <b>2.75</b></div>
-                    Let's correct your waterglass solution's silicon content first. <br>
-                    What is the mass percentage of the waterglass solution you bought?<br>
-                    (It's on the label of the bottle.)<br>
-                    <div>
-                        <input type="text" value="36" id="waterglasspercentage"
-                            style="width: 40px; text-align: right; display: inline;"> %
-                    </div>
+                    <p>How many Metakaolin we need?</p>
+                    <div stlye="display: inline">
+                        The first step is to get 1 mol Aluminum in the mix.
+                        Why Al first? Because metakaolin is the only source of Al in this whole geopolymer mix, while all the other elements are
+                        coming
+                        from two sources like Na is found both in the waterglas and in NaOH.<br><br>
+                        So let's fix the fix parameters first.<br><br>
+                        1 mol Al<sub>2</sub>O<sub>3</sub> contains 2 mol (or 2 part) Aluminum atoms. 
+                        But we only need 1 mol Aluminum so we need <b>half mol</b> Al<sub>2</sub>O<sub>3</sub> in our mix.
+                        According to our table above, half mol of Al<sub>2</sub>O<sub>3</sub>'s weight is<br>
+                         102 / 2 = <b>51 g</b>
 
-                    <button class="szep-gomb" onclick="
-                    document.getElementById('waterglassresult').style.display = 'block';
+                    </div>
+                </div>
+            </div>
+            <div class="image baljobbkeret" style="background-image: url('img/geopolymer/teszta.webp');">
+            </div>
+        </div>
+        <div class="row ">
+            <div class="text baljobbkeret">
+                <div class="padder">
+                    <p>How many Metakaolin we need?</p>
+                    <div stlye="display: inline">
+                        So we'll need 51 g of Al<sub>2</sub>O<sub>3</sub> in that bloody metakaolin.<br>
+                        What percentage of Al<sub>2</sub>O<sub>3</sub> can be found in your metakaolin product? (You can find this data in the
+                        product data sheet pdf.)
+                        <div>
+                            <input type="text" value="43" id="alupercent"
+                                style="width: 40px; text-align: right; display: inline;"> %
+                        </div>
+
+                        <button class="szep-gomb" onclick="
+                    document.getElementById('alupanel').style.display = 'block';
                     document.getElementById('catlittercalc').style.display = 'inline';
                     document.getElementById('blabla').style.display = 'none';
-                    wgpercent=document.getElementById('waterglasspercentage').value;
+                    alupercent=document.getElementById('alupercent').value;
+                    document.getElementById('alupercent2').textContent=alupercent;
 
-                    helyese=parseFloat(wgpercent);
+                    helyese=parseFloat(alupercent);
                     if (!(!isNaN(helyese) && helyese >= 1 && helyese <= 55)) {
                         alert('Number must be between 1 and 55.');
                         return;
                     }
 
-                    document.getElementById('wg1').innerHTML = wgpercent
-                    document.getElementById('wg2').innerHTML = wgpercent
-                    document.getElementById('wg3').innerHTML = wgpercent
-                    wassergram=100-wgpercent;
-                    document.getElementById('wasser1').innerHTML = wassergram;
-                    document.getElementById('wasser2').innerHTML = wassergram;
-                    document.getElementById('wasser3').innerHTML = wassergram;
-                    wassermol=wassergram/18;
-                    wgmol=wgpercent/122;
-                    document.getElementById('wassermol').innerHTML = wassermol.toFixed(2);
-                    document.getElementById('wassermol2').innerHTML = wassermol.toFixed(2);
-                    document.getElementById('wassermol3').innerHTML = wassermol.toFixed(2);
-                    document.getElementById('wgmol').innerHTML = wgmol.toFixed(2);
-                    document.getElementById('wgmol2').innerHTML = wgmol.toFixed(2);
-                    document.getElementById('wgmol3').innerHTML = wgmol.toFixed(2);
-                    molratio=wassergram/18/(wgpercent/122);
-                    document.getElementById('molratio').innerHTML = molratio.toFixed(2);
-                    wgamount=wassermol/5.5;
-                    document.getElementById('wgamount').innerHTML = wgamount.toFixed(2);
-                    addmol=wgamount-wgmol;
-                    document.getElementById('addmol').innerHTML = addmol.toFixed(2);
-                    document.getElementById('addmol2').innerHTML = addmol.toFixed(2);
-                    catlitter=addmol*60;
-                    document.getElementById('catlitter').innerHTML = catlitter.toFixed(2);
-                    document.getElementById('liter').innerHTML = (catlitter*10).toFixed(2);
-
                     ">Calculate</button>
-                    <br>
-                    <div style="display: none; text-align: left;" id="waterglassresult">
-                        This means you have <b><label id="wg1"></label> g</b> of waterglass dissolved in <b><label
-                                id="wasser1"></label> g</b> of
-                        water.<br>
-                        <label id="wasser2"></label> g of water means <label id="wasser3"></label> / <span
-                            style="color:red">18</span> =
-                        <b><label id="wassermol"></label> mol</b><br>
-                        <label id="wg2">36</label> g of waterglass means <label id="wg3"></label> / <span
-                            style="color:red">122</span> =
-                        <b><label id="wgmol"></label> mol</b><br>
-                        The Si : Water molecular ratio in this solution is <label id="wassermol3"></label> / <label
-                            id="wgmol3"></label> = <b><label id="molratio"></label></b><br>
-                        Instead of 5.5!
+                        <br><br>
+                        <div style="display: none; text-align: left;" id="alupanel">
+                            1 mol Al<sub>2</sub>O<sub>3</sub> contains 2 mol (or 2 part) Aluminum atoms. 
+                            But we only need 1 Aluminum so we need <b>half mol</b> Al<sub>2</sub>O<sub>3</sub> in our mix.
+                            According to our table above, half mol of Al<sub>2</sub>O<sub>3</sub>'s weight is 102 / 2 = <b>51 g</b>
+                            <table>
+                                <tr>
+                                    <th colspan="3" style="text-align: center;">Al<sub>2</sub>O<sub>3</sub></th>
+                                </tr>
+                                <tr>
+                                    <td>Amount</td>
+                                    <td>Containts</td>
+                                    <td>Weight</td>
+                                </tr>
+                                <tr>
+                                    <td>1 mol</td>
+                                    <td>2 mol Al (because Al<sub>2</sub> is 2Al)</td>
+                                    <td>102 g</td>
+                                </tr>
+                                <tr>
+                                    <td>0.5 mol</td>
+                                    <td>1 mol Al</td>
+                                    <td>51 g</td>
+                                </tr>
+                            </table>
+                            And this 51 g is the <label>43</label>% of the amount of Metakaolin we need to get 1 part of Aluminum.
+                            <table>
+                                <tr>
+                                    <td>43%</td>
+                                    <td>51 g</td>
+                                </tr>
+                                <tr>
+                                    <td>100%</td>
+                                    <td>x g</td>
+                                </tr>
+                            </table>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -232,13 +261,16 @@
             <div class="text baljobbkeret">
                 <div class="padder">
                     <p>Cat litter</p>
-                    <div stlye="display: inline">To bring the waterglass solution's H<sub>2</sub>O : Si ratio to 5.5, we
+                    <div stlye="display: inline">To bring the waterglass solution's H<sub>2</sub>O : Si ratio to
+                        5.5, we
                         need to add some
                         more silicon to the solution. But how?
                         We cannot simply drop sand into the water and hope it will dissolve. It will not.
                         <br><br>We need amorphous silicon as it is ready to dissolve in water.
-                        This is the part where cat litter comes into the picture. Yes. Those small white balls.<br><br>
-                        Cat litter is 100% amorphous SiO<sub>2</sub>, so we can simply add it to the waterglass solution
+                        This is the part where cat litter comes into the picture. Yes. Those small white
+                        balls.<br><br>
+                        Cat litter is 100% amorphous SiO<sub>2</sub>, so we can simply add it to the waterglass
+                        solution
                         in order to increase our silicon content.
                     </div>
                 </div>
@@ -251,14 +283,16 @@
                 <div class="padder">
                     <p>Adding more silicon to the solution</p>
                     <div id="blabla">This is a calculation area. Press the button above to see the results.</div>
-                    <div style="display: none;" id="catlittercalc">We'll need <label id="wassermol2"></label> mol / 5.5
+                    <div style="display: none;" id="catlittercalc">We'll need <label id="wassermol2"></label> mol /
+                        5.5
                         =
                         <b><label id="wgamount"></label> mol </b>SiO<sub>2</sub> instead of the original <label
                             id="wgmol2"></label> mol
                         into the solution.<br><br>
-                        That means additional <label id="addmol"></label> mol or <label id="addmol2"></label> x <span
-                            style="color:red">60</span> =
-                        <b><label id="catlitter"></label> g </b>of cat litter to be added to each <b>100 g</b> of the
+                        That means additional <label id="addmol"></label> mol or <label id="addmol2"></label> x
+                        <span style="color:red">60</span> =
+                        <b><label id="catlitter"></label> g </b>of cat litter to be added to each <b>100 g</b> of
+                        the
                         solution to reach the necessary 5.5 Si / H2O ratio.<br><br>
                         Mix it well then go to sleep. We'll continue tomorrow.
                     </div>
