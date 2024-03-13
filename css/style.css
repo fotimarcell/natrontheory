@@ -258,6 +258,9 @@ body {
 
 sup {display: inline;}
 
+ul {text-align: left;}
+
+.kozep {text-align: center;}
 
 table {
     width: 100%;

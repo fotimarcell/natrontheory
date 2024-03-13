@@ -20,6 +20,13 @@
 <body>
     <iframe src="menu.html" class="menuframe"></iframe>
 
+    <script>
+        glob_alupercent = 43;
+        glob_metakaolingram = 0;
+        glob_metakaolin_siliconpercent = 53;
+        glob_sio_gram = 0;
+        glob_sio_mol = 0;
+    </script>
     <div id="top" class="csik mobil-margok">
         <div class="szurkecsik">
             <div class="title">Introducing the "famous"</div>
@@ -56,9 +63,9 @@
                     Both can be used as alkali activators.
                     <br><br>
                     Second, if we omit that bloody oxigen (O) we end up with a much more comprehensible version:
-                    <div style="display: inline; font-size: larger; margin: 1em">M&bull;Al&bull;2 x Si&bull;5.5 x water
+                    <div style="display: inline; font-size: larger; margin: 1em">M&bull;Al&bull;2 Si&bull;5.5 water
                     </div>
-                    Now we can try decode the necessary parameters for our mixing.
+                    Now we can try to decode the necessary parameters for our mixing.
                 </div>
             </div>
             <div class="image baljobbkeret" style="background-image: url('img/geopolymer/ocean.webp');"></div>
@@ -94,7 +101,7 @@
                     the molar mass of the given chemical. You'll get the result in "mol", or molar mass.
                 </div>
             </div>
-            <div class="image baljobbkeret" style="background-image: url('img/geopolymer/atom.jpg');">
+            <div class="image baljobbkeret" style="background-image: url('img/geopolymer/molecules.jpg');">
             </div>
         </div>
         <div class="row reverse">
@@ -158,7 +165,7 @@
                     </table>
                 </div>
             </div>
-            <div class="image baljobbkeret" style="background-image: url('img/geopolymer/geohouse.jpg');">
+            <div class="image baljobbkeret" style="background-image: url('img/geopolymer/scale.jpg');">
             </div>
         </div>
         <div class="csik szurkecsik">
@@ -168,17 +175,21 @@
         <div class="row reverse">
             <div class="text baljobbkeret">
                 <div class="padder">
-                    <p>How many Metakaolin we need?</p>
+                    <p>Fixing a parameter: Aluminum</p>
                     <div stlye="display: inline">
-                        The first step is to get 1 mol Aluminum in the mix.
-                        Why Al first? Because metakaolin is the only source of Al in this whole geopolymer mix, while all the other elements are
-                        coming
-                        from two sources like Na is found both in the waterglas and in NaOH.<br><br>
-                        So let's fix the fix parameters first.<br><br>
-                        1 mol Al<sub>2</sub>O<sub>3</sub> contains 2 mol (or 2 part) Aluminum atoms. 
-                        But we only need 1 mol Aluminum so we need <b>half mol</b> Al<sub>2</sub>O<sub>3</sub> in our mix.
+                        Our first step is to fix at least one parameter from the four above in order to keep our sanity.
+                        We'll still have 3 more variables, so we still face a 3-variable equation after we fix one of
+                        them.
+                        <br><br>
+                        Why Al first? Because there is only source of Al, which is our metakaloin. All the other
+                        elements are
+                        coming from two sources. (Sodium is found both in the waterglas and in NaOH for
+                        example.)<br><br>
+                        1 mol Al<sub>2</sub>O<sub>3</sub> contains 2 mol (or 2 part) Aluminum atoms.
+                        But we only need 1 mol Aluminum so we need <b>half mol</b> Al<sub>2</sub>O<sub>3</sub> in our
+                        mix.
                         According to our table above, half mol of Al<sub>2</sub>O<sub>3</sub>'s weight is<br>
-                         102 / 2 = <b>51 g</b>
+                        102 / 2 = <b>51 g</b>
 
                     </div>
                 </div>
@@ -191,65 +202,54 @@
                 <div class="padder">
                     <p>How many Metakaolin we need?</p>
                     <div stlye="display: inline">
-                        So we'll need 51 g of Al<sub>2</sub>O<sub>3</sub> in that bloody metakaolin.<br>
-                        What percentage of Al<sub>2</sub>O<sub>3</sub> can be found in your metakaolin product? (You can find this data in the
-                        product data sheet pdf.)
-                        <div>
-                            <input type="text" value="43" id="alupercent"
-                                style="width: 40px; text-align: right; display: inline;"> %
+                        So to have 1 mol Aluminum we'll need <b>51 g</b> of Al<sub>2</sub>O<sub>3</sub> which is well
+                        mixed into
+                        your metakaolin.
+                        From this we can calculate the whole amount of metakaolin needed by using the percentage ratio
+                        of Al<sub>2</sub>O<sub>3</sub>. You will find this number in the product data sheet (probably a
+                        pdf).
+                        <br><br>
+                        <div>Ratio of Al<sub>2</sub>O<sub>3</sub> in your metakaolin product:
+                            <input type="text" id="alupercent" style="width: 40px; text-align: right; display: inline;">
+                            %
                         </div>
 
                         <button class="szep-gomb" onclick="
                     document.getElementById('alupanel').style.display = 'block';
-                    document.getElementById('catlittercalc').style.display = 'inline';
-                    document.getElementById('blabla').style.display = 'none';
-                    alupercent=document.getElementById('alupercent').value;
-                    document.getElementById('alupercent2').textContent=alupercent;
+                    glob_alupercent=document.getElementById('alupercent').value;
+                    document.getElementById('alupercent2').textContent=glob_alupercent;
 
-                    helyese=parseFloat(alupercent);
-                    if (!(!isNaN(helyese) && helyese >= 1 && helyese <= 55)) {
-                        alert('Number must be between 1 and 55.');
+                    helyese=parseFloat(glob_alupercent);
+                    if (!(!isNaN(helyese) && helyese >= 1 && helyese <= 100)) {
+                        alert('Number must be between 1 and 100.');
                         return;
                     }
+                    glob_metakaolingram=51*100/glob_alupercent;
+                    document.getElementById('metakaolin').textContent=glob_metakaolingram.toFixed(1);
+                    document.getElementById('metakaolin3').textContent=glob_metakaolingram.toFixed(1);
+                    document.getElementById('metakaolin4').textContent=glob_metakaolingram.toFixed(1);
 
-                    ">Calculate</button>
+                    ">Calculate the amount of metakaolin needed</button>
                         <br><br>
                         <div style="display: none; text-align: left;" id="alupanel">
-                            1 mol Al<sub>2</sub>O<sub>3</sub> contains 2 mol (or 2 part) Aluminum atoms. 
-                            But we only need 1 Aluminum so we need <b>half mol</b> Al<sub>2</sub>O<sub>3</sub> in our mix.
-                            According to our table above, half mol of Al<sub>2</sub>O<sub>3</sub>'s weight is 102 / 2 = <b>51 g</b>
                             <table>
                                 <tr>
-                                    <th colspan="3" style="text-align: center;">Al<sub>2</sub>O<sub>3</sub></th>
+                                    <th>Material</th>
+                                    <th>Ratio</th>
+                                    <th>Weight</th>
                                 </tr>
                                 <tr>
-                                    <td>Amount</td>
-                                    <td>Containts</td>
-                                    <td>Weight</td>
-                                </tr>
-                                <tr>
-                                    <td>1 mol</td>
-                                    <td>2 mol Al (because Al<sub>2</sub> is 2Al)</td>
-                                    <td>102 g</td>
-                                </tr>
-                                <tr>
-                                    <td>0.5 mol</td>
-                                    <td>1 mol Al</td>
-                                    <td>51 g</td>
-                                </tr>
-                            </table>
-                            And this 51 g is the <label>43</label>% of the amount of Metakaolin we need to get 1 part of Aluminum.
-                            <table>
-                                <tr>
-                                    <td>43%</td>
+                                    <td>Al<sub>2</sub>O<sub>3</sub></td>
+                                    <td><label id="alupercent2"></label>%</td>
                                     <td>51 g</td>
                                 </tr>
                                 <tr>
+                                    <td>Metakaolin</td>
                                     <td>100%</td>
-                                    <td>x g</td>
+                                    <td><b><label id="metakaolin"></label> g</b></td>
                                 </tr>
                             </table>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -257,44 +257,84 @@
             <div class="image baljobbkeret" style="background-image: url('img/geopolymer/teszta.webp');">
             </div>
         </div>
-        <div class="row">
-            <div class="text baljobbkeret">
-                <div class="padder">
-                    <p>Cat litter</p>
-                    <div stlye="display: inline">To bring the waterglass solution's H<sub>2</sub>O : Si ratio to
-                        5.5, we
-                        need to add some
-                        more silicon to the solution. But how?
-                        We cannot simply drop sand into the water and hope it will dissolve. It will not.
-                        <br><br>We need amorphous silicon as it is ready to dissolve in water.
-                        This is the part where cat litter comes into the picture. Yes. Those small white
-                        balls.<br><br>
-                        Cat litter is 100% amorphous SiO<sub>2</sub>, so we can simply add it to the waterglass
-                        solution
-                        in order to increase our silicon content.
-                    </div>
-                </div>
-            </div>
-            <div class="image baljobbkeret" style="background-image: url('img/geopolymer/catlitter.jpg');">
-            </div>
-        </div>
         <div class="row reverse">
             <div class="text baljobbkeret">
                 <div class="padder">
-                    <p>Adding more silicon to the solution</p>
-                    <div id="blabla">This is a calculation area. Press the button above to see the results.</div>
-                    <div style="display: none;" id="catlittercalc">We'll need <label id="wassermol2"></label> mol /
-                        5.5
-                        =
-                        <b><label id="wgamount"></label> mol </b>SiO<sub>2</sub> instead of the original <label
-                            id="wgmol2"></label> mol
-                        into the solution.<br><br>
-                        That means additional <label id="addmol"></label> mol or <label id="addmol2"></label> x
-                        <span style="color:red">60</span> =
-                        <b><label id="catlitter"></label> g </b>of cat litter to be added to each <b>100 g</b> of
-                        the
-                        solution to reach the necessary 5.5 Si / H2O ratio.<br><br>
-                        Mix it well then go to sleep. We'll continue tomorrow.
+                    <p>We have silicon in the metakaolin!</p>
+                    <div>
+                        Before we continue: there is another important number in that pdf, that is the ratio of
+                        SiO<sub>2</sub> in the metakaolin product.
+                        This is crucial because it is a constant amount we can only increase but not decrease with the
+                        other components.
+                        Let's calculate the "hidden" (in plain site) SiO<sub>2</sub> content in that <label
+                            id="metakaolin3"></label>&nbsp;g metakaolin!
+                    </div>
+                    <div stlye="display: inline">
+
+                        <br>
+                        <div>Ratio of SiO<sub>2</sub> in your metakaolin product:
+                            <input type="text" id="siopercent" style="width: 40px; text-align: right; display: inline;">
+                            %
+                        </div>
+
+                        <button class="szep-gomb" onclick="
+                    document.getElementById('siopanel').style.display = 'block';
+                    glob_metakaolin_siliconpercent=document.getElementById('siopercent').value;
+                    document.getElementById('siopercent2').textContent=glob_metakaolin_siliconpercent;
+    
+                    helyese=parseFloat(glob_metakaolin_siliconpercent);
+                    if (!(!isNaN(helyese) && helyese >= 1 && helyese <= 100)) {
+                        alert('Number must be between 1 and 100.');
+                        return;
+                    }
+                    glob_sio_gram=glob_metakaolin_siliconpercent*glob_metakaolingram/100;
+                    document.getElementById('sio_gram').textContent=glob_sio_gram.toFixed(1);
+                    document.getElementById('sio_gram2').textContent=glob_sio_gram.toFixed(1);
+                    glob_sio_mol=glob_sio_gram / 60;
+                    document.getElementById('sio_mol').textContent=glob_sio_mol.toFixed(4);
+                    document.getElementById('sio_mol2').textContent=glob_sio_mol.toFixed(4);
+                    document.getElementById('sio_mol3').textContent=glob_sio_mol.toFixed(4);
+                    document.getElementById('sio_hiany').textContent=(2-glob_sio_mol).toFixed(4);
+    
+                    ">Calculate the amount of SiO<sub>2</sub> in the metakaolin</button>
+                        <br><br>
+                        <div style="display: none; text-align: left;" id="siopanel">
+                            <table>
+                                <tr>
+                                    <th>Material</th>
+                                    <th>Ratio</th>
+                                    <th>Weight</th>
+                                </tr>
+                                <tr>
+                                    <td>Metakaolin</td>
+                                    <td>100%</td>
+                                    <td><label id="metakaolin4"></label> g</td>
+                                </tr>
+                                <tr>
+                                    <td>SiO<sub>2</sub></td>
+                                    <td><label id="siopercent2"></label>%</td>
+                                    <td><label id="sio_gram"></label> g</td>
+                                </tr>
+                            </table>
+
+                            <table>
+                                <tr>
+                                    <th>Material</th>
+                                    <th>Weight</th>
+                                    <th>Mol</th>
+                                </tr>
+                                <tr>
+                                    <td>SiO<sub>2</sub></td>
+                                    <td><label id="sio_gram2"></label> g</td>
+                                    <td><label id="sio_mol"></label></td>
+                                </tr>
+                                <tr>
+                                    <td>Si</td>
+                                    <td></td>
+                                    <td><label id="sio_mol2"></label></td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -302,12 +342,84 @@
             </div>
         </div>
     </div>
+    <div class="row ">
+        <div class="text baljobbkeret">
+            <div class="padder">
+                <p>Scoreboard</p>
+                It's time to summarize where we are now. What do we have and what do we miss?
+                <table>
+                    <tr>
+                        <th></th>
+                        <th class="kozep">"M"</th>
+                        <th class="kozep">Al</th>
+                        <th class="kozep">Si</th>
+                        <th class="kozep">H<sub>2</sub>O</th>
+                    </tr>
+                    <tr>
+                        <td>Target</td>
+                        <td class="kozep">1</td>
+                        <td class="kozep">1</td>
+                        <td class="kozep">2</td>
+                        <td class="kozep">5.5</td>
+                    </tr>
+                    <tr>
+                        <td>Current</td>
+                        <td class="kozep">0</td>
+                        <td class="kozep">1 ✔️</td>
+                        <td class="kozep"><label id="sio_mol3"></label></td>
+                        <td class="kozep">0</td>
+                    </tr>
+                    <tr>
+                        <td>Missing</td>
+                        <td class="kozep">1</td>
+                        <td class="kozep"></td>
+                        <td class="kozep"><label id="sio_hiany"></label></td>
+                        <td class="kozep">5.5</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="image baljobbkeret" style="background-image: url('img/geopolymer/teszta.webp');">
+        </div>
+    </div>
+    <div class="csik szurkecsik">
+        <div class="title" style="font-size: 50px;">Step Two</div>
+        <div class="title">Calculating the other three components</div>
+    </div>
+    <div class="row">
+        <div class="text baljobbkeret">
+            <div class="padder">
+                <p>The other three parameters</p>
+                <div>
+                    To fill in the gaps, we need to add some other materials to the mix:
+                </div>
+                <ul>
+                    <li>Sodium (Na): from waterglass solution or from NaOH</li>
+                    <li>Silicon (Si): from waterglass solution or from cat litter (not kidding)
+                    </li>
+                    <li>Water: from waterglass solution or from the tap</li>
+                </ul>
+                <div>
+
+                    Cat litter is an excellent source of water soluble, amorphous SiO<sub>2</sub>, it's easy to use,
+                    dirt cheap and clean.
+                    (If you use it directly from the bag, not from under the cat.)
+                </div>
+            </div>
+        </div>
+        <div class="image baljobbkeret" style="background-image: url('img/geopolymer/catlitter.jpg');">
+        </div>
+    </div>
     <div class="dominocsik">
         <button class="szep-gomb" onclick="window.location.href = 'alkali.html'">Step 2: Calculating Alkali
             Activation</button>
     </div>
     <iframe src="footer.html" class="menuframe"></iframe>
-
+    <script>
+        document.getElementById('alupercent').value = glob_alupercent;
+        document.getElementById('alupercent').value = glob_alupercent;
+        document.getElementById('siopercent').value = glob_metakaolin_siliconpercent;
+    </script>
 </body>
 
 </html>
