@@ -26,6 +26,8 @@
         glob_metakaolin_siliconpercent = 53;
         glob_sio_gram = 0;
         glob_sio_mol = 0;
+        glob_waterglass_percent = 36;
+        glob_waterglass_gram=100;
     </script>
     <div id="top" class="csik mobil-margok">
         <div class="szurkecsik">
@@ -410,6 +412,81 @@
         <div class="image baljobbkeret" style="background-image: url('img/geopolymer/catlitter.jpg');">
         </div>
     </div>
+    <div class="row reverse">
+        <div class="text baljobbkeret">
+            <div class="padder">
+                <p>Sodium silicate</p>
+                <div>
+                    Now we only need one more (and last) paramterer: the weight percentage of your waterglass solution.
+                    This is important because this ratio tells us how many sodium and silicon
+                    can be found in the liquid. It is clearly marked on the bottle, a typical number can be 36%.
+                </div>
+                <br>
+                <div>Percentage of Na<sub>2</sub>SiO<sub>3</sub> in your waterglass product:<br>
+                    <input type="text" id="waterglasspercent" style="width: 40px; text-align: right; display: inline;"
+                    onblur="glob_waterglass_percent=this.value;">
+                    %
+                </div>
+
+            </div>
+        </div>
+        <div class="image baljobbkeret" style="background-image: url('img/geopolymer/catlitter.jpg');">
+        </div>
+    </div>
+    <div class="row">
+        <div class="text baljobbkeret">
+            <div class="padder">
+                <p>Magic</p>
+                <div>
+                    Surprise! This problem has many solutions, in fact, there are endless variations that solve the problem. 
+                    That's why you need to set the amount of waterglass solution with this slider and watch the other 3 parameters
+                    change and select a variation that you "love".
+                </div>
+                <br>
+                <div>
+                    Amount of waterglass: <br>
+                    <input type="range" style="width: 300px;" min="0" max="200" id="slider" 
+                    oninput="document.getElementById('slider_value').textContent = this.value;
+                    document.getElementById('waterglass_gram').textContent=this.value;
+                    ">
+                    <br>
+                    <span id="slider_value">100</span> g
+                </div>
+                <table>
+                    <tr>
+                        <td colspan="3">Waterglass solution</td>
+                        <td><label id="waterglass_gram"></label> g</td>
+                    </tr>
+                    <tr>
+                        <th>Material</th>
+                        <th>From</th>
+                        <th>Missing</th>
+                        <th>Amount needed</th>
+                    </tr>
+                    <tr>
+                        <td>"M"</td>
+                        <td>NaOH<br>or<br>KOH</td>
+                        <td>y mol</td>
+                        <td><label>666</label> g<br>or<br><label>43</label> g</td>
+                    </tr>
+                    <tr>
+                        <td>Si</td>
+                        <td>Cat litter (SiO<sub>2</sub>)</td>
+                        <td>x mol</td>
+                        <td><label>666</label> g</td>
+                    </tr>
+                    <tr>
+                        <td>H<sub>2</sub>O</td>
+                        <td>Water</td>
+                        <td>z mol</td>
+                        <td><label>666</label> g</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="image baljobbkeret" style="background-image: url('img/geopolymer/catlitter.jpg');">
+        </div>
+    </div>
     <div class="dominocsik">
         <button class="szep-gomb" onclick="window.location.href = 'alkali.html'">Step 2: Calculating Alkali
             Activation</button>
@@ -419,6 +496,9 @@
         document.getElementById('alupercent').value = glob_alupercent;
         document.getElementById('alupercent').value = glob_alupercent;
         document.getElementById('siopercent').value = glob_metakaolin_siliconpercent;
+        document.getElementById('slider').value = glob_waterglass_gram;
+        document.getElementById('waterglasspercent').value = glob_waterglass_percent;
+        document.getElementById('waterglass_gram').textContent = glob_waterglass_gram;
     </script>
 </body>
 
