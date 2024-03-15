@@ -466,6 +466,8 @@
                 </div>
                 <button class="szep-gomb" onclick="
                 document.getElementById('surprise_panel').style.display = 'flex';
+                document.getElementById('magic_panel').style.display = 'flex';
+                document.getElementById('summary_panel').style.display = 'flex';
                 document.getElementById('waterglass_percent').textContent = glob_waterglass_percent;
                 ugrasDivre('surprise_panel');
                 calc_big();
@@ -479,20 +481,22 @@
     <div class="row" id="surprise_panel" style="display: none;">
         <div class="text baljobbkeret">
             <div class="padder">
-                <p>Wonderland</p>
+                <p>Surprise! Wonderland!</p>
                 <div>
                     Immerse in the endless possibilities of solutions! Just drag the slider and watch this story unfold.
                 </div>
                 <br>
-                <div>
-                    Amount of waterglass: <br>
-                    <input type="range" style="width: 300px;" min="0" max="200" id="slider" oninput="document.getElementById('slider_value').textContent = this.value;
+                <div >
+                    The yellow road: <br>
+                    <div style="background-color: yellow; padding: 10px;">
+                    <input type="range" style="width: 300px; background-color: yellow;" min="0" max="200" id="slider" oninput="document.getElementById('slider_value').textContent = this.value;
                     document.getElementById('waterglass_gram').textContent=this.value;
                     glob_waterglass_gram=this.value;
                     calc_big();
                     ">
+                    </div>
                     <br>
-                    <span id="slider_value">100</span> g
+                    <span id="slider_value">100</span> g waterglass solution
                 </div>
                 <table>
                     <tr>
@@ -553,10 +557,27 @@
                 </table>
             </div>
         </div>
-        <div class="image baljobbkeret" style="background-image: url('img/geopolymer/catlitter.jpg');">
+        <div class="image baljobbkeret" style="background-image: url('img/geopolymer/yellowroad.jpg');">
         </div>
     </div>
-    <div class="dominocsik">
+    <div class="row reverse" id="magic_panel" style="display: none;">
+        <div class="text baljobbkeret">
+            <div class="padder">
+                <p>Trips and tricks</p>
+                <div>
+                    You can try to find a mix where you don't need to add NaOH or water simply by dragging 
+                    the slider left or right. Try it!
+                    <br><br>
+                    Or if you don't have waterglass solution on the shelf, you can drag the slider to zero, and
+                    end up with a formula without waterglass at all.<br><br>
+                    Magic!
+                </div>
+            </div>
+        </div>
+        <div class="image baljobbkeret" style="background-image: url('img/geopolymer/alchemy.jpg');">
+        </div>
+    </div>
+    <div class="dominocsik" id="summary_panel" style="display: none;>
         Summary
     </div>
     <iframe src="footer.html" class="menuframe"></iframe>
