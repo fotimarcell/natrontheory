@@ -30,19 +30,19 @@
         glob_waterglass_gram = 100;
         glob_na2sio3_gram = 0;
         glob_missing_na_mol = 0;
-        glob_have_si_mol=0;
-        glob_missing_si_mol=0;
-        glob_missing_cat_gram=0;
-        glob_viz_gram=0;
-        glob_viz_mol=0;
-        glob_missing_viz_mol=0;
-        glob_missing_viz_gram=0;
+        glob_have_si_mol = 0;
+        glob_missing_si_mol = 0;
+        glob_missing_cat_gram = 0;
+        glob_viz_gram = 0;
+        glob_viz_mol = 0;
+        glob_missing_viz_mol = 0;
+        glob_missing_viz_gram = 0;
         function calc_big() {
             glob_na2sio3_gram = glob_waterglass_gram * glob_waterglass_percent / 100;
-            glob_viz_gram = glob_waterglass_gram -glob_na2sio3_gram;
+            glob_viz_gram = glob_waterglass_gram - glob_na2sio3_gram;
             glob_na2sio3_mol = glob_na2sio3_gram / 122;
             glob_viz_mol = glob_viz_gram / 18;
-            glob_missing_viz_mol=5.5-glob_viz_mol;
+            glob_missing_viz_mol = 5.5 - glob_viz_mol;
             glob_missing_viz_gram = glob_missing_viz_mol * 18;
             document.getElementById('na2sio3_gram').textContent = glob_na2sio3_gram.toFixed(2);
             document.getElementById('na2sio3_mol').textContent = glob_na2sio3_mol.toFixed(2);
@@ -60,9 +60,9 @@
             document.getElementById('missing_naoh_gram').textContent = (glob_missing_na_mol * 40).toFixed(2);
             document.getElementById('missing_koh_gram').textContent = (glob_missing_na_mol * 56).toFixed(2);
 
-            glob_have_si_mol=glob_sio_mol + glob_na2sio3_mol;
-            glob_missing_si_mol=2-glob_have_si_mol;
-            glob_missing_cat_gram=glob_missing_si_mol*60;
+            glob_have_si_mol = glob_sio_mol + glob_na2sio3_mol;
+            glob_missing_si_mol = 2 - glob_have_si_mol;
+            glob_missing_cat_gram = glob_missing_si_mol * 60;
             document.getElementById('have_si_mol').textContent = glob_have_si_mol.toFixed(2);
             document.getElementById('missing_si_mol').textContent = glob_missing_si_mol.toFixed(2);
             document.getElementById('missing_cat_gram').textContent = glob_missing_cat_gram.toFixed(2);
@@ -88,8 +88,7 @@
                     her formula on this page for our calculations. This one:
                     <div style="display: inline; font-size: larger; margin: 1em">
                         M&bull;AlO<sub>2</sub>&bull;2SiO<sub>2</sub>&bull;5.5H<sub>2</sub>O</div>
-                    Which looks absolutely crazy. Let me explain it in pure English.<br><br>
-
+                    Which looks absolutely crazy.
                 </div>
             </div>
             <div class="image baljobbkeret" style="background-image: url('img/geopolymer/metakaolin.png');">
@@ -101,10 +100,9 @@
                     <p>Decyphering the formula</p>
                     First of all, that capital M at the beginning of the formula is not a chemical element you never
                     heard of
-                    but a placeholder for either sodium (Na) or potassium (K).
-                    Both can be used as alkali activators.
+                    but a placeholder for either Sodium (Na) or Potassium (K).
                     <br><br>
-                    Second, if we omit that bloody oxigen (O) we end up with a much more comprehensible version:
+                    Second, if we omit that bloody oxigen (O) we end up with a much more condensed version:
                     <div style="display: inline; font-size: larger; margin: 1em">M&bull;Al&bull;2 Si&bull;5.5 water
                     </div>
                 </div>
@@ -114,14 +112,15 @@
         <div class="row reverse">
             <div class="text baljobbkeret">
                 <div class="padder">
-                    <p>What do we want to achieve?</p>
+                    <p>In plain English</p>
+                    We want:
                     <ul style="text-align: left;">
-                        <li>To have the same number of "M" (Sodium or Potassium) atoms as Aluminum (Al) atoms in the mix
+                        <li>the same number of "M" (Sodium or Potassium) atoms as Aluminum (Al) atoms in the mix
                         </li>
-                        <li>To have twice as much Silicon (Si) atoms than Aluminum atoms</li>
-                        <li>To have 5.5 times more water molecules than Aluminum atoms</li>
+                        <li>twice as much Silicon (Si) atoms than Aluminum atoms</li>
+                        <li>5.5 times more water molecules than Aluminum atoms</li>
                     </ul>
-                    <div>Or in short:</div>
+                    <p>Or in short:</p>
                     1 part "M", 1 part Aluminum, 2 part Silicon, 5.5 part water
                 </div>
             </div>
@@ -133,13 +132,15 @@
                 <div class="padder">
                     <p>Molecular mass and mol</p>
                     <div>We'll calculate with mols, or 6*10<sup>23</sup> atoms (or molecules) at a time. 1 mol material
-                        has the convenient property to "calculate" its weight by simply telling "grams" after the molar mass number. 
+                        has the convenient property to "calculate" its weight by simply telling "grams" after the molar
+                        mass number.
                         <br><br>
-                    If you are not familiar with these concepts, please learn them before moving on or you'll get lost.
-                    Guaranteed.
-                </div>
-                    
-                    
+                        If you are not familiar with these concepts, please learn them before moving on or you'll get
+                        lost.
+                        Guaranteed.
+                    </div>
+
+
                 </div>
             </div>
             <div class="image baljobbkeret" style="background-image: url('img/geopolymer/molecules.jpg');">
@@ -153,11 +154,15 @@
                         <b>Hydrogen (H)</b> has 1 proton
                         only, so it's atomic mass is <b>1</b>.<br>
                         <b>Oxigen (O)</b> has 8 protons + 8 neutrons, so it's atomic mass is <b>16</b>.<br><br>
-                        What is the molecular mass of <b>water (H<sub>2</sub>O)</b> then? <br>Well, it is <b>1 + 1 + 16
+                        What is the molecular mass of <b>water (H<sub>2</sub>O)</b> then? <br><b>1 + 1 + 16
                             = 18</b>
                     </div>
-                    <br>
-                    To put it in other words, 1 mol water contains 1 mol Oxygen and 2 mols Hydrogen.
+                    <div>
+                        What is the weight of 1 mol water? <br><b>18 grams</b>.
+                    </div>
+                    <div>
+                        How many mols of H can be found in 1 mol water? <br><b>2 mol H</b>.
+                    </div>
                 </div>
             </div>
             <div class="image baljobbkeret" style="background-image: url('img/geopolymer/water.jpg');">
@@ -166,7 +171,7 @@
         <div class="row ">
             <div class="text baljobbkeret">
                 <div class="padder">
-                    <p>Important molecular masses</p>
+                    <p>Molecular masses we use</p>
 
                     <table>
                         <tr>
@@ -183,7 +188,7 @@
                             <td>NaOH: 40</td>
                         </tr>
                         <tr>
-                            <td>Si (silocon): 28</td>
+                            <td>Si (silicon): 28</td>
                             <td>SiO<sub>2</sub>: 60</td>
                         </tr>
                         <tr>
@@ -214,7 +219,7 @@
                 <div class="padder">
                     <p>Fixing a parameter: Aluminum</p>
                     <div stlye="display: inline">
-                        Why Al first? Because there is only source of Al, which is our metakaloin. All the other
+                        Why Aluminum first? Because we have only source of Al, which is our metakaloin. All the other
                         elements are
                         coming from two sources. (Sodium is found both in the waterglas and in NaOH for
                         example.)<br><br>
@@ -235,14 +240,14 @@
                 <div class="padder">
                     <p>How many Metakaolin we need?</p>
                     <div stlye="display: inline">
-                        So to have 1 mol Aluminum we'll need <b>51 g</b> of Al<sub>2</sub>O<sub>3</sub> which is well
+                        So to have 1 mol Aluminum we need <b>51 g</b> of Al<sub>2</sub>O<sub>3</sub> which is well
                         mixed into
                         your metakaolin.
                         From this we can calculate the whole amount of metakaolin needed by using the percentage ratio
                         of Al<sub>2</sub>O<sub>3</sub>. You will find this number in the product data sheet (probably a
                         pdf).
                         <br><br>
-                        <div>Ratio of Al<sub>2</sub>O<sub>3</sub> in your metakaolin product:
+                        <div>Percentage of Al<sub>2</sub>O<sub>3</sub> in your metakaolin product:
                             <input type="text" id="alupercent" style="width: 40px; text-align: right; display: inline;">
                             %
                         </div>
@@ -295,7 +300,7 @@
                 <div class="padder">
                     <p>We have silicon in the metakaolin!</p>
                     <div>
-                        Before we continue: there is another important number in that pdf, that is the ratio of
+                        Before we continue: there is another important number in that pdf, that is the percentage of
                         SiO<sub>2</sub> in the metakaolin product.
                         This is crucial because it is a constant amount we can only increase but not decrease with the
                         other components.
@@ -305,7 +310,7 @@
                     <div stlye="display: inline">
 
                         <br>
-                        <div>Ratio of SiO<sub>2</sub> in your metakaolin product:
+                        <div>Percentage of SiO<sub>2</sub> in your metakaolin product:
                             <input type="text" id="siopercent" style="width: 40px; text-align: right; display: inline;">
                             %
                         </div>
@@ -422,9 +427,9 @@
     <div class="row">
         <div class="text baljobbkeret">
             <div class="padder">
-                <p>The other three parameters</p>
+                <p>Mind the gap!</p>
                 <div>
-                    To fill in the gaps, we need to add some other materials to the mix:
+                    We need to add some other materials to the mix:
                 </div>
                 <ul>
                     <li>Sodium (Na): from waterglass solution or from NaOH</li>
@@ -448,7 +453,8 @@
             <div class="padder">
                 <p>Sodium silicate</p>
                 <div>
-                    Now we only need one more (and last) paramterer: the weight percentage of Na<sub>2</sub>SiO<sub>3</sub> 
+                    Now we only need one more (and last) paramterer: the weight percentage of
+                    Na<sub>2</sub>SiO<sub>3</sub>
                     in your waterglass solution.
                     It is clearly marked on the bottle, a typical number being 36%.
                 </div>
@@ -461,7 +467,7 @@
                 <button class="szep-gomb" onclick="
                 document.getElementById('surprise_panel').style.display = 'flex';
                 document.getElementById('waterglass_percent').textContent = glob_waterglass_percent;
-
+                ugrasDivre('surprise_panel');
                 calc_big();
                 ">Calculate</button>
 
@@ -473,11 +479,9 @@
     <div class="row" id="surprise_panel" style="display: none;">
         <div class="text baljobbkeret">
             <div class="padder">
-                <p>Surprise!</p>
+                <p>Wonderland</p>
                 <div>
-                    This problem has many solutions, in fact, there are endless variations to choose from.
-                    Set the amount of waterglass solution you would like to use and watch the other 3 parameters
-                    change.
+                    Immerse in the endless possibilities of solutions! Just drag the slider and watch this story unfold.
                 </div>
                 <br>
                 <div>
@@ -553,8 +557,8 @@
         </div>
     </div>
     <div class="dominocsik">
-        Summary 
-   </div>
+        Summary
+    </div>
     <iframe src="footer.html" class="menuframe"></iframe>
     <script>
         document.getElementById('alupercent').value = glob_alupercent;
