@@ -104,6 +104,11 @@ body {
     background-color: #0056a4;
 }
 
+.szep-gomb:disabled {
+    background-color: grey;
+    color: darkgrey;
+}
+
 .container {
     width: 100%;
 }

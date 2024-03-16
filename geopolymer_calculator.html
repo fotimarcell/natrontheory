@@ -91,7 +91,7 @@
                     Which looks absolutely crazy.
                 </div>
             </div>
-            <div class="image baljobbkeret" style="background-image: url('img/geopolymer/metakaolin.png');">
+            <div class="image baljobbkeret" style="background-image: url('img/geopolymer/metakaolin.jpg');">
             </div>
         </div>
         <div class="row">
@@ -217,11 +217,11 @@
         <div class="row reverse">
             <div class="text baljobbkeret">
                 <div class="padder">
-                    <p>Fixing a parameter: Aluminum</p>
+                    <p>Locking a parameter: Aluminum</p>
                     <div stlye="display: inline">
-                        Why Aluminum first? Because we have only source of Al, which is our metakaloin. All the other
+                        We can easily lock the amount of Al to 1 mol, because we have only one source of Al, the metakaloin. (All the other
                         elements are
-                        coming from two sources. (Sodium is found both in the waterglas and in NaOH for
+                        coming from two sources. Sodium is found both in the waterglas and in NaOH for
                         example.)<br><br>
                         1 mol Al<sub>2</sub>O<sub>3</sub> contains 2 mol (or 2 part) Aluminum atoms.
                         But we only need 1 mol Aluminum so we need <b>half mol</b> Al<sub>2</sub>O<sub>3</sub> in our
@@ -240,10 +240,7 @@
                 <div class="padder">
                     <p>How many Metakaolin we need?</p>
                     <div stlye="display: inline">
-                        So to have 1 mol Aluminum we need <b>51 g</b> of Al<sub>2</sub>O<sub>3</sub> which is well
-                        mixed into
-                        your metakaolin.
-                        From this we can calculate the whole amount of metakaolin needed by using the percentage ratio
+                        We can calculate the whole amount of metakaolin needed by using the percentage ratio
                         of Al<sub>2</sub>O<sub>3</sub>. You will find this number in the product data sheet (probably a
                         pdf).
                         <br><br>
@@ -267,6 +264,10 @@
                     document.getElementById('metakaolin3').textContent=glob_metakaolingram.toFixed(1);
                     document.getElementById('metakaolin4').textContent=glob_metakaolingram.toFixed(1);
 
+                    meta_button=document.getElementById('metakaolin_button');
+                    meta_button.disabled = false;
+                    meta_button.textContent = 'Calculate the amount of SiO2 in the metakaolin';
+                    
                     ">Calculate the amount of metakaolin needed</button>
                         <br><br>
                         <div style="display: none; text-align: left;" id="alupanel">
@@ -315,7 +316,7 @@
                             %
                         </div>
 
-                        <button class="szep-gomb" onclick="
+                        <button class="szep-gomb" disabled id="metakaolin_button" onclick="
                     document.getElementById('siopanel').style.display = 'block';
                     glob_metakaolin_siliconpercent=document.getElementById('siopercent').value;
                     document.getElementById('siopercent2').textContent=glob_metakaolin_siliconpercent;
@@ -334,7 +335,7 @@
                     document.getElementById('sio_mol3').textContent=glob_sio_mol.toFixed(4);
                     document.getElementById('sio_hiany').textContent=(2-glob_sio_mol).toFixed(4);
     
-                    ">Calculate the amount of SiO<sub>2</sub> in the metakaolin</button>
+                    ">Please calculate the amount of Aluminum first</button>
                         <br><br>
                         <div style="display: none; text-align: left;" id="siopanel">
                             <table>
@@ -488,7 +489,7 @@
                 <br>
                 <div >
                     The yellow road: <br>
-                    <div style="background-color: yellow; padding: 10px;">
+                    <div style="background-color: yellow; padding: 5px;">
                     <input type="range" style="width: 300px; background-color: yellow;" min="0" max="200" id="slider" oninput="document.getElementById('slider_value').textContent = this.value;
                     document.getElementById('waterglass_gram').textContent=this.value;
                     glob_waterglass_gram=this.value;
