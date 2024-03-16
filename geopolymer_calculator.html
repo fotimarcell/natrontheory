@@ -11,6 +11,10 @@
         body {
             font-family: 'Open Sans', sans-serif;
         }
+
+        .megnemkell {
+            display: none;
+        }
     </style>
     <script src="script/utility.js"></script>
 </head>
@@ -82,7 +86,7 @@
             <div class="text baljobbkeret">
                 <div class="padder">
                     <p>The Kriven Formula</p>
-                    Precise geopolymer formulas are hard to find on the Internet. Not because it is high secret but
+                    Precise geopolymer formulas are hard to find on the Internet. Not because it is big secret but
                     because
                     the field is still in development (=chaos). One of the leading scientists is Waltraud M. Kriven,
                     we'll use
@@ -98,12 +102,12 @@
         <div class="row">
             <div class="text baljobbkeret">
                 <div class="padder">
-                    <p>Decyphering the formula</p>
+                    <p>Deciphering the formula</p>
                     First of all, that capital M at the beginning of the formula is not a chemical element you never
                     heard of
                     but a placeholder for either Sodium (Na) or Potassium (K).
                     <br><br>
-                    Second, if we omit that bloody oxigen (O) we end up with a much more condensed version:
+                    Second, if we omit that bloody oxygen (O) we end up with a much more condensed version:
                     <div style="display: inline; font-size: larger; margin: 1em">M&bull;Al&bull;2 Si&bull;5.5 water
                     </div>
                 </div>
@@ -122,7 +126,7 @@
                         <li>5.5 times more water molecules than Aluminum atoms</li>
                     </ul>
                     <p>Or in short:</p>
-                    1 part "M", 1 part Aluminum, 2 part Silicon, 5.5 part water
+                    1 part "M", 1 part Aluminum, 2 parts Silicon, 5.5 parts water
                 </div>
             </div>
             <div class="image baljobbkeret" style="background-image: url('img/geopolymer/printing.jpg');">
@@ -150,11 +154,11 @@
         <div class="row reverse">
             <div class="text baljobbkeret">
                 <div class="padder">
-                    <p>Calculating water's molecular mass</p>
+                    <p>Example: calculating water's molecular mass</p>
                     <div style="display: inline;">
                         <b>Hydrogen (H)</b> has 1 proton
-                        only, so it's atomic mass is <b>1</b>.<br>
-                        <b>Oxigen (O)</b> has 8 protons + 8 neutrons, so it's atomic mass is <b>16</b>.<br><br>
+                        only, so its atomic mass is <b>1</b>.<br>
+                        <b>Oxygen (O)</b> has 8 protons + 8 neutrons, so it's atomic mass is <b>16</b>.<br><br>
                         What is the molecular mass of <b>water (H<sub>2</sub>O)</b> then? <br><b>1 + 1 + 16
                             = 18</b>
                     </div>
@@ -180,24 +184,24 @@
                             <th>Molecular masses (molecules)</th>
                         </tr>
                         <tr>
-                            <td>K (potassium): 39</td>
+                            <td>K (Potassium): 39</td>
                             </td>
                             <td>KOH: 56</td>
                         </tr>
                         <tr>
-                            <td>Na (sodium): 23</td>
+                            <td>Na (Sodium): 23</td>
                             <td>NaOH: 40</td>
                         </tr>
                         <tr>
-                            <td>Si (silicon): 28</td>
+                            <td>Si (Silicon): 28</td>
                             <td>SiO<sub>2</sub>: 60</td>
                         </tr>
                         <tr>
-                            <td>Al (aluminum): 27</td>
+                            <td>Al (Aluminum): 27</td>
                             <td>Al2O3<sub>2</sub>: 102</td>
                         </tr>
                         <tr>
-                            <td>O (oxygen): 16</td>
+                            <td>O (Oxygen): 16</td>
                             <td>Water (H<sub>2</sub>O): 18</td>
                         </tr>
                         <tr>
@@ -213,7 +217,7 @@
         </div>
         <div class="csik szurkecsik">
             <div class="title" style="font-size: 50px;">Step One</div>
-            <div class="title">Calculating 1 part (1 mol) aluminum</div>
+            <div class="title">Calculating 1 part (1 mol) Aluminum</div>
         </div>
         <div class="row reverse">
             <div class="text baljobbkeret">
@@ -221,9 +225,9 @@
                     <p>Locking a parameter: Aluminum</p>
                     <div stlye="display: inline">
                         We can easily lock the amount of Al to 1 mol, because we have only one source of Al, the
-                        metakaloin. (All the other
+                        metakaolin. (All the other
                         elements are
-                        coming from two sources. Sodium is found both in the waterglas and in NaOH for
+                        coming from two sources. Sodium is found both in the waterglass and in NaOH for
                         example.)<br><br>
                         1 mol Al<sub>2</sub>O<sub>3</sub> contains 2 mol (or 2 part) Aluminum atoms.
                         But we only need 1 mol Aluminum so we need <b>half mol</b> Al<sub>2</sub>O<sub>3</sub> in our
@@ -243,7 +247,8 @@
                     <p>How many Metakaolin we need?</p>
                     <div stlye="display: inline">
                         We can calculate the whole amount of metakaolin needed by using the percentage ratio
-                        of Al<sub>2</sub>O<sub>3</sub>. You will find this number in the product data sheet (probably a
+                        of Al<sub>2</sub>O<sub>3</sub> in it. You will find this number in the product data sheet
+                        (probably a
                         pdf).
                         <br><br>
                         <div>Percentage of Al<sub>2</sub>O<sub>3</sub> in your metakaolin product:
@@ -340,6 +345,13 @@
                     document.getElementById('waterglass_button').disabled = false;
                     document.getElementById('waterglass_helptext').style.display = 'none';
 
+                    var divElemek = document.querySelectorAll('.megnemkell');
+
+                    for (var i = 0; i < divElemek.length; i++) {
+                        divElemek[i].style.display = 'flex'; 
+                }
+
+
                     ">Calculate the amount of SiO2 in the metakaolin</button>
                         <div id="sio_helptext" style="font-size: smaller;">
                             This button is disabled until you calculate the amount of metakaolin above.
@@ -389,7 +401,7 @@
             </div>
         </div>
     </div>
-    <div class="row ">
+    <div class="row megnemkell">
         <div class="text baljobbkeret">
             <div class="padder">
                 <p>Scoreboard</p>
@@ -429,11 +441,11 @@
         <div class="image baljobbkeret" style="background-image: url('img/geopolymer/teszta.webp');">
         </div>
     </div>
-    <div class="csik szurkecsik">
+    <div class="csik szurkecsik megnemkell" style="flex-direction: column;">
         <div class="title" style="font-size: 50px;">Step Two</div>
         <div class="title">Calculating the other three components</div>
     </div>
-    <div class="row">
+    <div class="row megnemkell">
         <div class="text baljobbkeret">
             <div class="padder">
                 <p>Mind the gap!</p>
@@ -457,7 +469,7 @@
         <div class="image baljobbkeret" style="background-image: url('img/geopolymer/catlitter.jpg');">
         </div>
     </div>
-    <div class="row reverse">
+    <div class="row reverse megnemkell">
         <div class="text baljobbkeret">
             <div class="padder">
                 <p>Sodium silicate</p>
@@ -496,7 +508,7 @@
                 <p>Surprise! Wonderland!</p>
                 <div>
                     Immerse in the endless possibilities of solutions! Just drag the slider and walk down the yellow
-                    road.
+                    road. Or chaos, in short.
                 </div>
                 <br>
                 <div style="width: 100%;">
@@ -588,17 +600,23 @@
         <div class="image baljobbkeret" style="background-image: url('img/geopolymer/alchemy.jpg');">
         </div>
     </div>
-    <div class="csik mobil-margok" id="summary_panel" style="display: none;">
-        <div class="szurkecsik footsentence">
-            <div class="title" style="font-size: 50px;">Summary</div>
-            <p>Your Personal Secret Geopolymer Formula:</p>
-            <ul>
-                <li>M: either <span id="missing_naoh_gram2"></span> g NaOH or <span id="missing_koh_gram2"></span> g KOH</li>
-                <li>Waterglass: <span id="waterglass_gram2"></span> g</li>
-                <li>Cat litter: <span id="missing_cat_gram2"></span> g</li>
-                <li>Metakaolin: <span id="metakaolin5"></span> g</li>
-            </ul>
 
+    <div class="csik szurkecsik" id="summary_panel" style="display: none; flex-direction: column;">
+        <div class="title" style="font-size: 50px;">Summary</div>
+        <div class="title">Your Personal Secret Geopolymer Formula</div>
+        <br>
+        <div style="font-size: larger; border: 2px solid orange; padding: 10px;">
+            <div style="font-size: larger; border: 2px solid orange; padding: 20px;">
+                Mix the following ingredients together, then let the mixture sit for 24 hours:<br><br>
+                M: either <b><span id="missing_naoh_gram2"></span> g</b> NaOH or <b><span id="missing_koh_gram2"></span>
+                    g</b> KOH,
+                Waterglass: <b><span id="waterglass_gram2"></span> g</b>,
+                Cat litter: <b><span id="missing_cat_gram2"></span> g</b><br><br>
+                After 24 hours add <b><span id="metakaolin5"></span> g</b> of metakaolin<br><br>
+                Mix it well with a drill with 10
+                minutes, then pour it in a mold.<br><br>
+                You can remove it from the mold after 24 hours curing.
+            </div>
         </div>
     </div>
     <iframe src="footer.html" class="menuframe"></iframe>
