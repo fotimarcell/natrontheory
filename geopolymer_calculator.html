@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -19,7 +17,31 @@
 
 <body>
     <iframe src="menu.html" class="menuframe"></iframe>
-
+    <style>
+        input[type="range"] {
+          -webkit-appearance: none; /* Eltávolítja a böngésző alapértelmezett megjelenését */
+          width: 100%; /* A csúszka teljes szélessége */
+          background: transparent; /* Átlátszó háttér */
+        }
+        
+        input[type="range"]::-webkit-slider-runnable-track {
+          -webkit-appearance: none;
+          background: lightgrey; /* Alapértelmezett háttérszín */
+          height: 8px; /* Pálya magassága */
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          height: 20px; /* A fogó magassága */
+          width: 20px; /* A fogó szélessége */
+          background: #fff; /* A fogó színe */
+          margin-top: -9px; /* Középre igazítja a fogót a pályához képest */
+          border-radius: 50%; /* Kerekített fogó */
+        }
+        
+        /* Dinamikusan változó hátteret itt nem állítunk be, azt JavaScript fogja kezelni */
+        </style>
+        
     <script>
         glob_alupercent = 43;
         glob_metakaolingram = 0;
@@ -264,9 +286,8 @@
                     document.getElementById('metakaolin3').textContent=glob_metakaolingram.toFixed(1);
                     document.getElementById('metakaolin4').textContent=glob_metakaolingram.toFixed(1);
 
-                    meta_button=document.getElementById('metakaolin_button');
-                    meta_button.disabled = false;
-                    meta_button.textContent = 'Calculate the amount of SiO2 in the metakaolin';
+                    document.getElementById('metakaolin_button').disabled = false;
+                    document.getElementById('sio_helptext').style.display = 'none';
                     
                     ">Calculate the amount of metakaolin needed</button>
                         <br><br>
@@ -279,13 +300,13 @@
                                 </tr>
                                 <tr>
                                     <td>Al<sub>2</sub>O<sub>3</sub></td>
-                                    <td><label id="alupercent2"></label>%</td>
+                                    <td><span id="alupercent2"></span>%</td>
                                     <td>51 g</td>
                                 </tr>
                                 <tr>
                                     <td>Metakaolin</td>
                                     <td>100%</td>
-                                    <td><b><label id="metakaolin"></label> g</b></td>
+                                    <td><b><span id="metakaolin"></span> g</b></td>
                                 </tr>
                             </table>
 
@@ -305,8 +326,8 @@
                         SiO<sub>2</sub> in the metakaolin product.
                         This is crucial because it is a constant amount we can only increase but not decrease with the
                         other components.
-                        Let's calculate the "hidden" (in plain site) SiO<sub>2</sub> content in that <label
-                            id="metakaolin3"></label>&nbsp;g metakaolin!
+                        Let's calculate the "hidden" (in plain site) SiO<sub>2</sub> content in that <span
+                            id="metakaolin3"></span>&nbsp;g metakaolin!
                     </div>
                     <div stlye="display: inline">
 
@@ -334,9 +355,15 @@
                     document.getElementById('sio_mol2').textContent=glob_sio_mol.toFixed(4);
                     document.getElementById('sio_mol3').textContent=glob_sio_mol.toFixed(4);
                     document.getElementById('sio_hiany').textContent=(2-glob_sio_mol).toFixed(4);
-    
-                    ">Please calculate the amount of Aluminum first</button>
-                        <br><br>
+
+                    document.getElementById('waterglass_button').disabled = false;
+                    document.getElementById('waterglass_helptext').style.display = 'none';
+
+                    ">Calculate the amount of SiO2 in the metakaolin</button>
+                    <div id="sio_helptext" style="font-size: smaller;">
+                        This button is disabled until you calculate the amount of metakaolin above.
+                    </div>
+                    <br><br>
                         <div style="display: none; text-align: left;" id="siopanel">
                             <table>
                                 <tr>
@@ -347,12 +374,12 @@
                                 <tr>
                                     <td>Metakaolin</td>
                                     <td>100%</td>
-                                    <td><label id="metakaolin4"></label> g</td>
+                                    <td><span id="metakaolin4"></span> g</td>
                                 </tr>
                                 <tr>
                                     <td>SiO<sub>2</sub></td>
-                                    <td><label id="siopercent2"></label>%</td>
-                                    <td><label id="sio_gram"></label> g</td>
+                                    <td><span id="siopercent2"></span>%</td>
+                                    <td><span id="sio_gram"></span> g</td>
                                 </tr>
                             </table>
 
@@ -364,13 +391,13 @@
                                 </tr>
                                 <tr>
                                     <td>SiO<sub>2</sub></td>
-                                    <td><label id="sio_gram2"></label> g</td>
-                                    <td><label id="sio_mol"></label></td>
+                                    <td><span id="sio_gram2"></span> g</td>
+                                    <td><span id="sio_mol"></span></td>
                                 </tr>
                                 <tr>
                                     <td>Si</td>
                                     <td></td>
-                                    <td><label id="sio_mol2"></label></td>
+                                    <td><span id="sio_mol2"></span></td>
                                 </tr>
                             </table>
                         </div>
@@ -405,14 +432,14 @@
                         <td>Current</td>
                         <td class="kozep">0</td>
                         <td class="kozep">1 ✔️</td>
-                        <td class="kozep"><label id="sio_mol3"></label></td>
+                        <td class="kozep"><span id="sio_mol3"></span></td>
                         <td class="kozep">0</td>
                     </tr>
                     <tr>
                         <td class="piros"><b>Missing</b></td>
                         <td class="kozep piros"><b>1</b></td>
                         <td class="kozep"></td>
-                        <td class="kozep piros"><b><label id="sio_hiany"></label></b></td>
+                        <td class="kozep piros"><b><span id="sio_hiany"></span></b></td>
                         <td class="kozep piros"><b>5.5</b></td>
                     </tr>
                 </table>
@@ -465,7 +492,7 @@
                         ">
                     %
                 </div>
-                <button class="szep-gomb" onclick="
+                <button class="szep-gomb" disabled id="waterglass_button" onclick="
                 document.getElementById('surprise_panel').style.display = 'flex';
                 document.getElementById('magic_panel').style.display = 'flex';
                 document.getElementById('summary_panel').style.display = 'flex';
@@ -473,6 +500,9 @@
                 ugrasDivre('surprise_panel');
                 calc_big();
                 ">Calculate</button>
+                    <div id="waterglass_helptext" style="font-size: smaller;">
+                        This button is disabled until you calculate the SiO<sub>2</sub> content of the metakaolin above.
+                    </div>
 
             </div>
         </div>
@@ -484,45 +514,42 @@
             <div class="padder">
                 <p>Surprise! Wonderland!</p>
                 <div>
-                    Immerse in the endless possibilities of solutions! Just drag the slider and watch this story unfold.
+                    Immerse in the endless possibilities of solutions! Just drag the slider and walk down the yellow road.
                 </div>
                 <br>
-                <div >
-                    The yellow road: <br>
-                    <div style="background-color: yellow; padding: 5px;">
-                    <input type="range" style="width: 300px; background-color: yellow;" min="0" max="200" id="slider" oninput="document.getElementById('slider_value').textContent = this.value;
+                <div style="width: 100%;">
+                    <span id="slider_value">100</span> g waterglass solution
+                        <input type="range" style="width: 100%; background-color: yellow;" min="0" max="200" id="slider" oninput="document.getElementById('slider_value').textContent = this.value;
                     document.getElementById('waterglass_gram').textContent=this.value;
                     glob_waterglass_gram=this.value;
                     calc_big();
                     ">
-                    </div>
                     <br>
-                    <span id="slider_value">100</span> g waterglass solution
                 </div>
                 <table>
                     <tr>
-                        <th colspan="3"><label id="waterglass_gram"></label> g waterglass solution (<label
-                                id="waterglass_percent"></label> %) contains</th>
+                        <th colspan="3"><span id="waterglass_gram"></span> g waterglass solution (<span
+                                id="waterglass_percent"></span> %) contains</th>
                     </tr>
                     <tr>
                         <td>Na<sub>2</sub>SiO<sub>3</sub></td>
-                        <td><label id="na2sio3_gram"></label> g</td>
-                        <td><label id="na2sio3_mol"></label> mol</td>
+                        <td><span id="na2sio3_gram"></span> g</td>
+                        <td><span id="na2sio3_mol"></span> mol</td>
                     </tr>
                     <tr>
                         <td>Na (2!)</td>
                         <td></td>
-                        <td><label id="na_mol"></label> mol</td>
+                        <td><span id="na_mol"></span> mol</td>
                     </tr>
                     <tr>
                         <td>Si</td>
                         <td></td>
-                        <td><label id="si_mol"></label> mol</td>
+                        <td><span id="si_mol"></span> mol</td>
                     </tr>
                     <tr>
                         <td>H<sub>2</sub>O</td>
-                        <td><label id="viz_gram"></label> g</td>
-                        <td><label id="viz_mol"></label> mol</td>
+                        <td><span id="viz_gram"></span> g</td>
+                        <td><span id="viz_mol"></span> mol</td>
                     </tr>
                 </table>
                 <table>
@@ -536,24 +563,24 @@
                     <tr>
                         <td>"M"</td>
                         <td>1 mol</td>
-                        <td><label id="have_na_mol"></label> mol</td>
-                        <td><label id="missing_na_mol"></label> mol</td>
-                        <td>NaOH <label id="missing_naoh_gram"></label> g<br>or<br>KOH <label
-                                id="missing_koh_gram"></label> g</td>
+                        <td><span id="have_na_mol"></span> mol</td>
+                        <td><span id="missing_na_mol"></span> mol</td>
+                        <td>NaOH <span id="missing_naoh_gram"></span> g<br>or<br>KOH <span
+                                id="missing_koh_gram"></span> g</td>
                     </tr>
                     <tr>
                         <td>Si</td>
                         <td>2 mol</td>
-                        <td><label id="have_si_mol"></label> mol</td>
-                        <td><label id="missing_si_mol"></label> mol</td>
-                        <td><label id="missing_cat_gram"></label> g catt litter (SiO<sub>2</sub>)</td>
+                        <td><span id="have_si_mol"></span> mol</td>
+                        <td><span id="missing_si_mol"></span> mol</td>
+                        <td><span id="missing_cat_gram"></span> g catt litter (SiO<sub>2</sub>)</td>
                     </tr>
                     <tr>
                         <td>H<sub>2</sub>O</td>
                         <td>5.5 mol</td>
-                        <td><label id="have_viz_mol"></label> mol</td>
-                        <td><label id="missing_viz_mol"></label> mol</td>
-                        <td><label id="missing_viz_gram"></label> g water</td>
+                        <td><span id="have_viz_mol"></span> mol</td>
+                        <td><span id="missing_viz_mol"></span> mol</td>
+                        <td><span id="missing_viz_gram"></span> g water</td>
                     </tr>
                 </table>
             </div>
@@ -591,6 +618,24 @@
         document.getElementById('waterglass_percent').value = glob_waterglass_percent;
         document.getElementById('waterglass_gram').textContent = glob_waterglass_gram;
     </script>
+    <script>
+        function updateSlider(track) {
+          // Számolja ki a csúszka kitöltöttségének százalékos arányát
+          var value = (track.value - track.min) / (track.max - track.min);
+          // Frissíti a csúszka hátterét, hogy dinamikusan változzon a bal oldal színe
+          track.style.background = 'linear-gradient(to right, yellow ' + value * 100 + '%, #ddd ' + value * 100 + '%)';
+          alert(8);
+        }
+        
+        // Megkapja a csúszka elemet
+        var slider = document.getElementById('wgpercent');
+        // Beállít egy kezdő hátteret
+        updateSlider(slider);
+        // Hozzáad egy "input" eseményfigyelőt, ami frissíti a hátteret minden változásnál
+        slider.addEventListener('input', function() {
+          updateSlider(this);
+        });
+        </script>
 </body>
 
 </html>
