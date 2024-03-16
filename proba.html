@@ -1,33 +1,16 @@
 <!DOCTYPE html>
-<html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gomb Interakció Példa</title>
-    <style>
-        #targetButton {
-            transition: transform 0.3s ease;
-        }
 
-        #targetButton.enlarged {
-            transform: scale(1.5); /* 1.5-szörösére növeli a méretét */
-        }
-    </style>
-</head>
 <body>
+    <style>
+input[type='range'] {
+  /* A "kitöltött" rész és a fogó színének beállítása */
+  accent-color: green;
+}
 
-<button id="triggerButton">Trigger Gomb</button>
-<button id="targetButton">Cél Gomb</button>
-
-<script>
-    document.getElementById('triggerButton').addEventListener('mouseenter', function() {
-        document.getElementById('targetButton').classList.add('enlarged');
-    });
-
-    document.getElementById('triggerButton').addEventListener('mouseleave', function() {
-        document.getElementById('targetButton').classList.remove('enlarged');
-    });
-</script>
-
+</style>
+    <div class="chrome">
+        <input id="myinput" min="0" max="60" type="range" value="30">
+    </div>
 </body>
+
 </html>

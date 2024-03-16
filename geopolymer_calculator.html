@@ -17,31 +17,7 @@
 
 <body>
     <iframe src="menu.html" class="menuframe"></iframe>
-    <style>
-        input[type="range"] {
-          -webkit-appearance: none; /* Eltávolítja a böngésző alapértelmezett megjelenését */
-          width: 100%; /* A csúszka teljes szélessége */
-          background: transparent; /* Átlátszó háttér */
-        }
-        
-        input[type="range"]::-webkit-slider-runnable-track {
-          -webkit-appearance: none;
-          background: lightgrey; /* Alapértelmezett háttérszín */
-          height: 8px; /* Pálya magassága */
-        }
-        
-        input[type="range"]::-webkit-slider-thumb {
-          -webkit-appearance: none;
-          height: 20px; /* A fogó magassága */
-          width: 20px; /* A fogó szélessége */
-          background: #fff; /* A fogó színe */
-          margin-top: -9px; /* Középre igazítja a fogót a pályához képest */
-          border-radius: 50%; /* Kerekített fogó */
-        }
-        
-        /* Dinamikusan változó hátteret itt nem állítunk be, azt JavaScript fogja kezelni */
-        </style>
-        
+
     <script>
         glob_alupercent = 43;
         glob_metakaolingram = 0;
@@ -79,15 +55,18 @@
             glob_missing_na_mol = 1 - glob_na2sio3_mol * 2;
             document.getElementById('have_na_mol').textContent = (glob_na2sio3_mol * 2).toFixed(2);
             document.getElementById('missing_na_mol').textContent = glob_missing_na_mol.toFixed(2);
-            document.getElementById('missing_naoh_gram').textContent = (glob_missing_na_mol * 40).toFixed(2);
-            document.getElementById('missing_koh_gram').textContent = (glob_missing_na_mol * 56).toFixed(2);
+            document.getElementById('missing_naoh_gram').textContent = (glob_missing_na_mol * 40).toFixed(1);
+            document.getElementById('missing_koh_gram').textContent = (glob_missing_na_mol * 56).toFixed(1);
+            document.getElementById('missing_naoh_gram2').textContent = (glob_missing_na_mol * 40).toFixed(1);
+            document.getElementById('missing_koh_gram2').textContent = (glob_missing_na_mol * 56).toFixed(1);
 
             glob_have_si_mol = glob_sio_mol + glob_na2sio3_mol;
             glob_missing_si_mol = 2 - glob_have_si_mol;
             glob_missing_cat_gram = glob_missing_si_mol * 60;
             document.getElementById('have_si_mol').textContent = glob_have_si_mol.toFixed(2);
             document.getElementById('missing_si_mol').textContent = glob_missing_si_mol.toFixed(2);
-            document.getElementById('missing_cat_gram').textContent = glob_missing_cat_gram.toFixed(2);
+            document.getElementById('missing_cat_gram').textContent = glob_missing_cat_gram.toFixed(1);
+            document.getElementById('missing_cat_gram2').textContent = glob_missing_cat_gram.toFixed(1);
 
         }
     </script>
@@ -241,7 +220,8 @@
                 <div class="padder">
                     <p>Locking a parameter: Aluminum</p>
                     <div stlye="display: inline">
-                        We can easily lock the amount of Al to 1 mol, because we have only one source of Al, the metakaloin. (All the other
+                        We can easily lock the amount of Al to 1 mol, because we have only one source of Al, the
+                        metakaloin. (All the other
                         elements are
                         coming from two sources. Sodium is found both in the waterglas and in NaOH for
                         example.)<br><br>
@@ -285,6 +265,7 @@
                     document.getElementById('metakaolin').textContent=glob_metakaolingram.toFixed(1);
                     document.getElementById('metakaolin3').textContent=glob_metakaolingram.toFixed(1);
                     document.getElementById('metakaolin4').textContent=glob_metakaolingram.toFixed(1);
+                    document.getElementById('metakaolin5').textContent=glob_metakaolingram.toFixed(1);
 
                     document.getElementById('metakaolin_button').disabled = false;
                     document.getElementById('sio_helptext').style.display = 'none';
@@ -360,10 +341,10 @@
                     document.getElementById('waterglass_helptext').style.display = 'none';
 
                     ">Calculate the amount of SiO2 in the metakaolin</button>
-                    <div id="sio_helptext" style="font-size: smaller;">
-                        This button is disabled until you calculate the amount of metakaolin above.
-                    </div>
-                    <br><br>
+                        <div id="sio_helptext" style="font-size: smaller;">
+                            This button is disabled until you calculate the amount of metakaolin above.
+                        </div>
+                        <br><br>
                         <div style="display: none; text-align: left;" id="siopanel">
                             <table>
                                 <tr>
@@ -500,9 +481,9 @@
                 ugrasDivre('surprise_panel');
                 calc_big();
                 ">Calculate</button>
-                    <div id="waterglass_helptext" style="font-size: smaller;">
-                        This button is disabled until you calculate the SiO<sub>2</sub> content of the metakaolin above.
-                    </div>
+                <div id="waterglass_helptext" style="font-size: smaller;">
+                    This button is disabled until you calculate the SiO<sub>2</sub> content of the metakaolin above.
+                </div>
 
             </div>
         </div>
@@ -514,13 +495,15 @@
             <div class="padder">
                 <p>Surprise! Wonderland!</p>
                 <div>
-                    Immerse in the endless possibilities of solutions! Just drag the slider and walk down the yellow road.
+                    Immerse in the endless possibilities of solutions! Just drag the slider and walk down the yellow
+                    road.
                 </div>
                 <br>
                 <div style="width: 100%;">
                     <span id="slider_value">100</span> g waterglass solution
-                        <input type="range" style="width: 100%; background-color: yellow;" min="0" max="200" id="slider" oninput="document.getElementById('slider_value').textContent = this.value;
+                    <input type="range" style="width: 100%;" min="0" max="200" id="slider" oninput="document.getElementById('slider_value').textContent = this.value;
                     document.getElementById('waterglass_gram').textContent=this.value;
+                    document.getElementById('waterglass_gram2').textContent=this.value;
                     glob_waterglass_gram=this.value;
                     calc_big();
                     ">
@@ -565,8 +548,8 @@
                         <td>1 mol</td>
                         <td><span id="have_na_mol"></span> mol</td>
                         <td><span id="missing_na_mol"></span> mol</td>
-                        <td>NaOH <span id="missing_naoh_gram"></span> g<br>or<br>KOH <span
-                                id="missing_koh_gram"></span> g</td>
+                        <td>NaOH <span id="missing_naoh_gram"></span> g<br>or<br>KOH <span id="missing_koh_gram"></span>
+                            g</td>
                     </tr>
                     <tr>
                         <td>Si</td>
@@ -593,7 +576,7 @@
             <div class="padder">
                 <p>Trips and tricks</p>
                 <div>
-                    You can try to find a mix where you don't need to add NaOH or water simply by dragging 
+                    You can try to find a mix where you don't need to add NaOH or water simply by dragging
                     the slider left or right. Try it!
                     <br><br>
                     Or if you don't have waterglass solution on the shelf, you can drag the slider to zero, and
@@ -605,8 +588,18 @@
         <div class="image baljobbkeret" style="background-image: url('img/geopolymer/alchemy.jpg');">
         </div>
     </div>
-    <div class="dominocsik" id="summary_panel" style="display: none;>
-        Summary
+    <div class="csik mobil-margok" id="summary_panel" style="display: none;">
+        <div class="szurkecsik footsentence">
+            <div class="title" style="font-size: 50px;">Summary</div>
+            <p>Your Personal Secret Geopolymer Formula:</p>
+            <ul>
+                <li>M: either <span id="missing_naoh_gram2"></span> g NaOH or <span id="missing_koh_gram2"></span> g KOH</li>
+                <li>Waterglass: <span id="waterglass_gram2"></span> g</li>
+                <li>Cat litter: <span id="missing_cat_gram2"></span> g</li>
+                <li>Metakaolin: <span id="metakaolin5"></span> g</li>
+            </ul>
+
+        </div>
     </div>
     <iframe src="footer.html" class="menuframe"></iframe>
     <script>
@@ -617,25 +610,8 @@
         document.getElementById('wgpercent').value = glob_waterglass_percent;
         document.getElementById('waterglass_percent').value = glob_waterglass_percent;
         document.getElementById('waterglass_gram').textContent = glob_waterglass_gram;
+        document.getElementById('waterglass_gram2').textContent = glob_waterglass_gram;
     </script>
-    <script>
-        function updateSlider(track) {
-          // Számolja ki a csúszka kitöltöttségének százalékos arányát
-          var value = (track.value - track.min) / (track.max - track.min);
-          // Frissíti a csúszka hátterét, hogy dinamikusan változzon a bal oldal színe
-          track.style.background = 'linear-gradient(to right, yellow ' + value * 100 + '%, #ddd ' + value * 100 + '%)';
-          alert(8);
-        }
-        
-        // Megkapja a csúszka elemet
-        var slider = document.getElementById('wgpercent');
-        // Beállít egy kezdő hátteret
-        updateSlider(slider);
-        // Hozzáad egy "input" eseményfigyelőt, ami frissíti a hátteret minden változásnál
-        slider.addEventListener('input', function() {
-          updateSlider(this);
-        });
-        </script>
 </body>
 
 </html>
