@@ -16,6 +16,18 @@
             display: none;
         }
 
+        .color1 {
+            color: #77d;
+            font-weight: bold;
+            font-style: italic  ;
+        }
+
+        .color2 {
+            color: #7A0;
+            font-weight: bold;
+            font-style: italic  ;
+        }
+
         /*Chrome*/
         @media screen and (-webkit-min-device-pixel-ratio:0) {
             input[type='range'] {
@@ -68,7 +80,7 @@
             background-size: 30px;
             background-repeat: no-repeat;
             border-radius: 50%;
-            opacity: 1; 
+            opacity: 1;
             width: 30px;
             height: 30px;
             position: relative;
@@ -129,19 +141,19 @@
             glob_viz_mol = glob_viz_gram / 18;
             glob_missing_viz_mol = 5.5 - glob_viz_mol;
             glob_missing_viz_gram = glob_missing_viz_mol * 18;
-            document.getElementById('na2sio3_gram').textContent = glob_na2sio3_gram.toFixed(2);
             document.getElementById('na2sio3_mol').textContent = glob_na2sio3_mol.toFixed(2);
             document.getElementById('si_mol').textContent = glob_na2sio3_mol.toFixed(2);
             document.getElementById('na_mol').textContent = (glob_na2sio3_mol * 2).toFixed(2);
-            document.getElementById('viz_gram').textContent = glob_viz_gram.toFixed(2);
             document.getElementById('viz_mol').textContent = glob_viz_mol.toFixed(2);
             document.getElementById('have_viz_mol').textContent = glob_viz_mol.toFixed(2);
             document.getElementById('missing_viz_mol').textContent = glob_missing_viz_mol.toFixed(2);
+            document.getElementById('missing_viz_mol2').textContent = glob_missing_viz_mol.toFixed(2);
             document.getElementById('missing_viz_gram').textContent = glob_missing_viz_gram.toFixed(2);
 
             glob_missing_na_mol = 1 - glob_na2sio3_mol * 2;
             document.getElementById('have_na_mol').textContent = (glob_na2sio3_mol * 2).toFixed(2);
             document.getElementById('missing_na_mol').textContent = glob_missing_na_mol.toFixed(2);
+            document.getElementById('missing_na_mol2').textContent = glob_missing_na_mol.toFixed(2);
             document.getElementById('missing_naoh_gram').textContent = (glob_missing_na_mol * 40).toFixed(1);
             document.getElementById('missing_koh_gram').textContent = (glob_missing_na_mol * 56).toFixed(1);
             document.getElementById('missing_naoh_gram2').textContent = (glob_missing_na_mol * 40).toFixed(1);
@@ -152,6 +164,7 @@
             glob_missing_cat_gram = glob_missing_si_mol * 60;
             document.getElementById('have_si_mol').textContent = glob_have_si_mol.toFixed(2);
             document.getElementById('missing_si_mol').textContent = glob_missing_si_mol.toFixed(2);
+            document.getElementById('missing_si_mol2').textContent = glob_missing_si_mol.toFixed(2);
             document.getElementById('missing_cat_gram').textContent = glob_missing_cat_gram.toFixed(1);
             document.getElementById('missing_cat_gram2').textContent = glob_missing_cat_gram.toFixed(1);
 
@@ -507,7 +520,7 @@
                     <tr>
                         <td>Current</td>
                         <td class="kozep">0</td>
-                        <td class="kozep">1 ✔️</td>
+                        <td class="kozep zold">1 ✔️</td>
                         <td class="kozep"><span id="sio_mol3"></span></td>
                         <td class="kozep">0</td>
                     </tr>
@@ -585,82 +598,90 @@
         <div class="image baljobbkeret" style="background-image: url('img/geopolymer/wg.jpg');">
         </div>
     </div>
-    <div class="row" id="surprise_panelll" style="display: noneeee;">
+    <div class="row" id="surprise_panel" style="display: none;">
         <div class="text baljobbkeret">
             <div class="padder">
-                <p>Surprise! Wonderland!</p>
+                <p>Follow the yellow brick road, Dorothy!</p>
+
                 <div>
-                    Immerse in the endless possibilities of solutions! Just drag the slider and walk down the yellow
-                    road, Alice.
+                    This is the place where lame gamification kicks in. It was inevitable, sorry. Drag Dorothy left or
+                    right
+                    on the yellow road to discover the endless variations of valid geopolymer formulas!
                 </div>
                 <br>
                 <div style="width: 100%;">
-                    <span id="slider_value">100</span> g waterglass solution
+                    <span id="slider_value">100</span> g waterglass solution (<span id="waterglass_percent"></span> %)
+                    contains
                     <input type="range" style="width: 100%;" min="0" max="200" id="slider" oninput="document.getElementById('slider_value').textContent = this.value;
-                    document.getElementById('waterglass_gram').textContent=this.value;
                     document.getElementById('waterglass_gram2').textContent=this.value;
                     glob_waterglass_gram=this.value;
                     calc_big();
                     ">
-                    <br>
+                    <div style="font-size: smaller;">
+                        <span id="na2sio3_mol"></span> mol Na<sub>2</sub>SiO<sub>3</sub>, ergo
+                        <span id="na_mol" class="color1"></span> mol Na (2!), <span id="si_mol"></span> mol Si and
+                        <span id="viz_mol" class="color2"></span> mol H<sub>2</sub>O
+                    </div>
                 </div>
                 <table>
                     <tr>
-                        <th colspan="3"><span id="waterglass_gram"></span> g waterglass solution (<span
-                                id="waterglass_percent"></span> %) contains</th>
+                        <th></th>
+                        <th class="kozep">"M"</th>
+                        <th class="kozep">Al</th>
+                        <th class="kozep">Si</th>
+                        <th class="kozep">H<sub>2</sub>O</th>
                     </tr>
                     <tr>
-                        <td>Na<sub>2</sub>SiO<sub>3</sub></td>
-                        <td><span id="na2sio3_gram"></span> g</td>
-                        <td><span id="na2sio3_mol"></span> mol</td>
+                        <td>Target</td>
+                        <td class="kozep">1</td>
+                        <td class="kozep">1</td>
+                        <td class="kozep">2</td>
+                        <td class="kozep">5.5</td>
                     </tr>
                     <tr>
-                        <td>Na (2!)</td>
-                        <td></td>
-                        <td><span id="na_mol"></span> mol</td>
+                        <td>Current</td>
+                        <td class="kozep"><span id="have_na_mol" class="color1"></span></td>
+                        <td class="kozep zold">1 ✔️</td>
+                        <td class="kozep"><span id="have_si_mol"></span></span></td>
+                        <td class="kozep"><span id="have_viz_mol" class="color2"></span></td>
                     </tr>
                     <tr>
-                        <td>Si</td>
-                        <td></td>
-                        <td><span id="si_mol"></span> mol</td>
-                    </tr>
-                    <tr>
-                        <td>H<sub>2</sub>O</td>
-                        <td><span id="viz_gram"></span> g</td>
-                        <td><span id="viz_mol"></span> mol</td>
+                        <td class="piros"><b>Missing</b></td>
+                        <td class="kozep piros"><b><span id="missing_na_mol"></span></b></td>
+                        <td class="kozep"></td>
+                        <td class="kozep piros"><b><span id="missing_si_mol"></span></b></td>
+                        <td class="kozep piros"><b><span id="missing_viz_mol"></span></b></td>
                     </tr>
                 </table>
+                In order to reach the target, you need to add:
                 <table>
                     <tr>
+                        <th></th>
                         <th>Material</th>
-                        <th>Goal</th>
-                        <th>Have</th>
-                        <th>Missing</th>
-                        <th>Add</th>
+                        <th>Molar mass</th>
+                        <th>Weight</th>
                     </tr>
                     <tr>
-                        <td>"M"</td>
-                        <td>1 mol</td>
-                        <td><span id="have_na_mol"></span> mol</td>
-                        <td><span id="missing_na_mol"></span> mol</td>
-                        <td>NaOH <span id="missing_naoh_gram"></span> g<br>or<br>KOH <span id="missing_koh_gram"></span>
-                            g</td>
+                        <td>M*</td>
+                        <td>NaOH</td>
+                        <td><span id="missing_na_mol2"></span> mol</td>
+                        <td><b><span id="missing_naoh_gram"></span> g</span></b></td>
                     </tr>
                     <tr>
                         <td>Si</td>
-                        <td>2 mol</td>
-                        <td><span id="have_si_mol"></span> mol</td>
-                        <td><span id="missing_si_mol"></span> mol</td>
-                        <td><span id="missing_cat_gram"></span> g catt litter (SiO<sub>2</sub>)</td>
+                        <td>Cat Litter (SiO<sub>2</sub>)</td>
+                        <td><span id="missing_si_mol2"></span> mol</td>
+                        <td><b><span id="missing_cat_gram"></span> g</b></td>
                     </tr>
                     <tr>
                         <td>H<sub>2</sub>O</td>
-                        <td>5.5 mol</td>
-                        <td><span id="have_viz_mol"></span> mol</td>
-                        <td><span id="missing_viz_mol"></span> mol</td>
-                        <td><span id="missing_viz_gram"></span> g water</td>
+                        <td>Water</td>
+                        <td><span id="missing_viz_mol2"></span> mol</td>
+                        <td><b><span id="missing_viz_gram"></span> g </b></td>
                     </tr>
                 </table>
+                <div style="font-size: smaller;">*You can replace NaOH with <span id="missing_koh_gram"></span> g KOH if you want.
+                </div>
             </div>
         </div>
         <div class="image baljobbkeret" style="background-image: url('img/geopolymer/yellowroad.jpg');">
@@ -691,8 +712,8 @@
         <div style="font-size: larger; border: 2px solid orange; padding: 10px;">
             <div style="font-size: larger; border: 2px solid orange; padding: 20px;">
                 Mix the following ingredients together, then let the mixture sit for 24 hours:<br><br>
-                M: either <b><span id="missing_naoh_gram2"></span> g</b> NaOH or <b><span id="missing_koh_gram2"></span>
-                    g</b> KOH,
+                M: either <b><span id="missing_naoh_gram2"></span> g</b> NaOH (or <b><span id="missing_koh_gram2"></span>
+                    g</b> KOH),
                 Waterglass: <b><span id="waterglass_gram2"></span> g</b>,
                 Cat litter: <b><span id="missing_cat_gram2"></span> g</b><br><br>
                 After 24 hours add <b><span id="metakaolin5"></span> g</b> of metakaolin<br><br>
@@ -710,7 +731,6 @@
         document.getElementById('slider').value = glob_waterglass_gram;
         document.getElementById('wgpercent').value = glob_waterglass_percent;
         document.getElementById('waterglass_percent').value = glob_waterglass_percent;
-        document.getElementById('waterglass_gram').textContent = glob_waterglass_gram;
         document.getElementById('waterglass_gram2').textContent = glob_waterglass_gram;
     </script>
 </body>
