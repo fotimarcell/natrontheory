@@ -15,6 +15,89 @@
         .megnemkell {
             display: none;
         }
+
+        /*Chrome*/
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            input[type='range'] {
+                overflow: hidden;
+                width: 80px;
+                -webkit-appearance: none;
+                background-color: #9a905d;
+            }
+
+            input[type='range']::-webkit-slider-runnable-track {
+                height: 30px;
+                -webkit-appearance: none;
+                color: yellow;
+                margin-top: -1px;
+            }
+
+            input[type='range']::-webkit-slider-thumb {
+                width: 30px;
+                -webkit-appearance: none;
+                height: 30px;
+                cursor: ew-resize;
+                background: yellow;
+                box-shadow: -800px 0 0 800px yellow;
+            }
+
+        }
+
+        /** FF*/
+        input[type="range"]::-moz-range-progress {
+            background-color: yellow;
+        }
+
+        input[type="range"]::-moz-range-track {
+            background-color: #9a905d;
+        }
+
+        /* IE*/
+        input[type="range"]::-ms-fill-lower {
+            background-color: yellow;
+        }
+
+        input[type="range"]::-ms-fill-upper {
+            background-color: #9a905d;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            background-image: url('img/girl.jpg');
+            background-position: center;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            opacity: 1; 
+            width: 30px;
+            height: 30px;
+            position: relative;
+            top: 0px;
+            z-index: 99;
+        }
+
+        ::-moz-range-thumb {
+            background-image: url('img/girl.jpg');
+            background-position: center;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+        }
+
+        ::-ms-thumb {
+            background-image: url('img/girl.jpg');
+            background-position: center;
+            background-size: 20px;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            z-index: 9999;
+            display: block;
+            background-color: transparent;
+        }
     </style>
     <script src="script/utility.js"></script>
 </head>
@@ -502,13 +585,13 @@
         <div class="image baljobbkeret" style="background-image: url('img/geopolymer/wg.jpg');">
         </div>
     </div>
-    <div class="row" id="surprise_panel" style="display: none;">
+    <div class="row" id="surprise_panelll" style="display: noneeee;">
         <div class="text baljobbkeret">
             <div class="padder">
                 <p>Surprise! Wonderland!</p>
                 <div>
                     Immerse in the endless possibilities of solutions! Just drag the slider and walk down the yellow
-                    road. Or chaos, in short.
+                    road, Alice.
                 </div>
                 <br>
                 <div style="width: 100%;">
