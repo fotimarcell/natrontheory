@@ -19,13 +19,13 @@
         .color1 {
             color: #77d;
             font-weight: bold;
-            font-style: italic  ;
+            font-style: italic;
         }
 
         .color2 {
             color: #7A0;
             font-weight: bold;
-            font-style: italic  ;
+            font-style: italic;
         }
 
         /*Chrome*/
@@ -149,6 +149,7 @@
             document.getElementById('missing_viz_mol').textContent = glob_missing_viz_mol.toFixed(2);
             document.getElementById('missing_viz_mol2').textContent = glob_missing_viz_mol.toFixed(2);
             document.getElementById('missing_viz_gram').textContent = glob_missing_viz_gram.toFixed(2);
+            document.getElementById('missing_viz_gram2').textContent = glob_missing_viz_gram.toFixed(2);
 
             glob_missing_na_mol = 1 - glob_na2sio3_mol * 2;
             document.getElementById('have_na_mol').textContent = (glob_na2sio3_mol * 2).toFixed(2);
@@ -680,7 +681,8 @@
                         <td><b><span id="missing_viz_gram"></span> g </b></td>
                     </tr>
                 </table>
-                <div style="font-size: smaller;">*You can replace NaOH with <span id="missing_koh_gram"></span> g KOH if you want.
+                <div style="font-size: smaller;">*You can replace NaOH with <span id="missing_koh_gram"></span> g KOH if
+                    you want.
                 </div>
             </div>
         </div>
@@ -705,21 +707,29 @@
         </div>
     </div>
 
-    <div class="csik szurkecsik" id="summary_panel" style="display: none; flex-direction: column;">
+    <div class="csik szurkecsik" id="summary_panel" style="display: none; flex-direction: column; align-items: center;">
         <div class="title" style="font-size: 50px;">Summary</div>
         <div class="title">Your Personal Secret Geopolymer Formula</div>
         <br>
-        <div style="font-size: larger; border: 2px solid orange; padding: 10px;">
-            <div style="font-size: larger; border: 2px solid orange; padding: 20px;">
-                Mix the following ingredients together, then let the mixture sit for 24 hours:<br><br>
-                M: either <b><span id="missing_naoh_gram2"></span> g</b> NaOH (or <b><span id="missing_koh_gram2"></span>
-                    g</b> KOH),
-                Waterglass: <b><span id="waterglass_gram2"></span> g</b>,
-                Cat litter: <b><span id="missing_cat_gram2"></span> g</b><br><br>
-                After 24 hours add <b><span id="metakaolin5"></span> g</b> of metakaolin<br><br>
+        <div style="font-size: larger; border: 2px solid orange; padding: 10px; max-width: 500px">
+            <div style="font-size: larger; border: 2px solid orange; padding: 20px; display: flex;  flex-direction:column; align-items: center; text-align: left;">
+                <div class="title">Ingredients</div>
+                <ul>
+                    <li>M: either <b><span id="missing_naoh_gram2"></span> g</b> NaOH (or <b><span
+                                id="missing_koh_gram2"></span>
+                            g</b> KOH)</li>
+                    <li>Waterglass: <b><span id="waterglass_gram2"></span> g</b></li>
+                    <li>Cat litter: <b><span id="missing_cat_gram2"></span> g</b></li>
+                    <li>Water:  <b><span id="missing_viz_gram2"></span> g</b></li>
+                    <li>Metakaloin: <b><span id="metakaolin5"></span> g</b></li>
+                </ul>
+                <div class="title">Method</div><br>
+                <div><b>Day 1:</b> Put the cat litter into the water and mix it well. Add the NaOH (or KOH) powder into the mix. Beware of 
+                surprise heat, as both are exotermic in water. Let it dissolve for 24 hours.</div><br>
+                <div><b>Day 2:</b> After 24 hours add the metakaolin to the liquid. 
                 Mix it well with a drill with 10
-                minutes, then pour it in a mold.<br><br>
-                You can remove it from the mold after 24 hours curing.
+                minutes, then pour it in a mold.</div><br>
+                <div><b>Day 3:</b> You can remove it from the mold. Enjoy.</div>
             </div>
         </div>
     </div>
