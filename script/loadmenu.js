@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div id="hamburger-menu">
             <img src="img/hamburger.png" class="hambuci" alt="Menu" />
             <div id="dropdown-content" style="display: none;">
-            <a href="index.html">Home</a>
+            <a href="/">Home</a>
             <a href="geopolymer_calculator.html">Geopolymer Calculator</a>
             </div>
         </div>
