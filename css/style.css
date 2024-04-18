@@ -217,6 +217,14 @@ a:visited {
     font-size: 24px;
 }
 
+.middlesentence {
+    font-size: 24px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 2em;
+    text-align: justify;
+}
 .footsentence {
     font-size: 24px;
     padding: 100px;
