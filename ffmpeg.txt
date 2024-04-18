@@ -1,0 +1,7 @@
+FFMPEG konvertáló és kicsinyítő:
+
+ffmpeg -i pentahydrate.mov -b:v 1M -bufsize 1M -maxrate 1.2M pentahydrate.mp4
+
+FFMPEG pster.jpg készítése:
+
+ffmpeg -i video.mp4 -frames:v 1 output.jpg
