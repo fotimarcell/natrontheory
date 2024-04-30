@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Map</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
+    <script src="script/utility.js"></script>
+</head>
+
+<body>
+    <div id="menu-placeholder" class="menuframe"></div>
+    <script src="script/loadmenu.js"></script>
+
+    <div id="top" class="csik mobil-margok">
+        <div class="szurkecsik">
+            <div class="fofofotitle">Natron Map</div>
+            <div class="title">The world you have never imagined to exist</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="text baljobbkeret">
+                <div class="padder">
+                    Before I hand over the complete map, let me show you some interesting patterns I discovered while
+                    searching for natron sources.<br><br>
+                    <p>The Derinkuyu Square</p>
+                    In the region of Cappadocia in Turkey, you can find around a hundred underground cities, each carved
+                    into volcanic tuff, all located within an area bounded by four salt lakes. Take a look at the
+                    markers!<br><br>
+                    <div>Legend: <img src="img/map/yellow_pin.jpg"> Underground cities <img src="img/map/blue_pin.jpg">
+                        Endless natron sources</div>
+
+                </div>
+            </div>
+            <div class="image baljobbkeret" style="background-image: url('img/map/derinkuyu.jpg');"></div>
+        </div>
+        <div class="row reverse">
+            <div class="text baljobbkeret">
+                <div class="padder">
+                    <p>Ancient Peru</p>
+                    What's fascinating about Peru is that all the megalithic sites are located several thousand meters
+                    above sea level. It's tough to find ancient dried-up seas there. Therefore, these sites are situated
+                    around a central natron source, with even the farthest one no more than 40 kilometers from the salt
+                    spring, Salinas de Maras.<br><br>
+                    Cusco, Ollantaytambo, Sacsayhuaman, Machu Picchu and all the other lesser known sites are located
+                    around the only natron source in these mountains.
+                </div>
+            </div>
+            <div class="image baljobbkeret" style="background-image: url('img/map/peru.jpg');"></div>
+        </div>
+        <div class="row ">
+            <div class="text baljobbkeret">
+                <div class="padder">
+                    <p>Indian Pairs</p>
+                    Across the vast expanse of India, the ancient "stone carvings" follow a different pattern. Here, due
+                    to the immense distances, the megalithic sites aren't clustered around a central source. Instead,
+                    wherever there's an unlimited supply of natron, you find gigantic ancient "carvings" as well. One
+                    lake - one (or more) megalithic site.<br><br>
+                    The coastal areas near Mumbai are the only place where we haven't yet identified a natron source.
+                    However, these areas are also accessible by water, so we're not too hung up on this minor hiccup.
+                </div>
+            </div>
+            <div class="image baljobbkeret" style="background-image: url('img/map/india.jpg');"></div>
+        </div>
+    </div>
+    <div class="csik mobil-margok">
+        <div class="szurkecsik footsentence">
+            <div>
+                And now: help yourself! Here is the custom map containing gigantic megalithic carvings and buildings and
+                the identified endless natron sources nearby. Feel free to suggest more places to add!
+            </div>
+        </div>
+    </div>
+
+    <iframe src="https://www.google.com/maps/d/embed?mid=1L1HN9C48MWxpx0OH42NWbmmVZ9STLYw&ehbc=2E312F&noprof=1"
+        width="100%" height="800px"></iframe>
+    <div id="footer-placeholder" class="menuframe"></div>
+    <script src="script/loadfooter.js"></script>
+    <script>
+        document.getElementById('alupercent').value = glob_alupercent;
+        document.getElementById('alupercent').value = glob_alupercent;
+        document.getElementById('siopercent').value = glob_metakaolin_siliconpercent;
+        document.getElementById('slider').value = glob_waterglass_gram;
+        document.getElementById('wgpercent').value = glob_waterglass_percent;
+        document.getElementById('waterglass_percent').value = glob_waterglass_percent;
+        document.getElementById('waterglass_gram2').textContent = glob_waterglass_gram;
+    </script>
+</body>
+
+</html>
