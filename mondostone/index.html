@@ -23,6 +23,10 @@
       max-width: 50em;
 
     }
+    .image {
+      width: 500px;
+    }
+
 
     @media (max-width: 600px) {
 
@@ -36,10 +40,14 @@
       h1 {
         font-size: 1.8em;
       }
+
+      .image {
+        width: 300px;
+      }
+
     }
 
-
-    .image {
+    .imagetext {
       font-size: smaller;
       font-style: italic;
       text-align: center;
@@ -66,9 +74,9 @@
     <p></p>
     <div>
       <div style="float: left;">
-        <img src="media/geopolymer.jpg" style=" width: 500px;"
+        <img src="media/geopolymer.jpg" class="image"
           alt="Examples of geopolymer frameworks – Geopolymer Institute" />
-        <p class="image">Chemical composition of standard geopolymer</p>
+        <p class="imagetext">Chemical composition of standard geopolymer</p>
       </div>
       <p>Geopolymers
         offer a sustainable alternative to traditional cement-based materials,
@@ -81,7 +89,7 @@
     </div>
     <div style=" clear: both;">
       <div style="float: right;"><img src="media/wg.jpg" style=" width: 150px;" />
-        <p class="image">Chemical composition<br>of Waterglass</p>
+        <p class="imagetext">Chemical composition<br>of Waterglass</p>
       </div>
       <p>Waterglass is a key ingredient in many geopolymer formulations due to
         its high alkalinity and ability to activate aluminosilicate materials.
