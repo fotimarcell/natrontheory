@@ -16,36 +16,20 @@
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
+      color: #555;
     }
 
     .content {
       margin: 0 auto;
       max-width: 50em;
-
+      padding-top: 40px;
     }
+
     .image {
       width: 500px;
     }
 
 
-    @media (max-width: 600px) {
-
-      .content {
-        margin: 0 auto;
-        max-width: 50em;
-        padding: 20px;
-
-      }
-
-      h1 {
-        font-size: 1.8em;
-      }
-
-      .image {
-        width: 300px;
-      }
-
-    }
 
     .imagetext {
       font-size: smaller;
@@ -61,6 +45,97 @@
       background-color: black;
       height: 50px;
     }
+
+    .bigheader {
+      font-size: 60px;
+      color: #fafafa;
+    }
+
+    .subheader {
+      font-size: 30px;
+      color: #fafafa;
+    }
+
+    .bigbackground {
+      background-image: url("media/pebbles.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .overlaydiv {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .paddiv {
+      padding: 100px;
+
+    }
+
+    .graybox {
+      background-color: #eee;
+      padding: 40px 0;
+    }
+
+    .boxes {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 100px;
+      justify-content: space-between;
+      align-content: center;
+    }
+
+    .box {
+      flex: 1 1 200px;
+      width: 200px;
+      margin: 20px;
+      padding: 40px;
+      border: 2px solid gray;
+      background-color: white;
+    }
+
+    @media (max-width: 1000px) {
+
+      .content {
+        margin: 0 auto;
+        max-width: 50em;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      .image {
+        width: 300px;
+      }
+
+      .bigheader {
+        font-size: 36px;
+      }
+
+      .subheader {
+        font-size: 18px;
+      }
+
+      .paddiv {
+        padding: 20px;
+      }
+      .graybox {
+        padding: 20px 0;
+      }
+
+      .boxes {
+        padding: 0 20px;
+      }
+
+      .box {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
   </style>
 </head>
 
@@ -68,14 +143,50 @@
   <div class="stickyheader">
     <img src="media/logo.jpg">
   </div>
+  <div class="bigbackground">
+    <div class="overlaydiv">
+      <div class="paddiv">
+        <h1 class="bigheader">Introducing MondoSTONE</h1>
+
+        <h2 class="subheader">A unique blend of wood ash, water glass, and honey used to create
+          geopolymers for
+          sustainable
+          construction materials.
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div class="graybox">
+    <h1 class="subheader" style="text-align: center; color: inherit;">Key Components and Benefits</h1>
+    <div class="boxes">
+      <div class="box">
+        <h3>Wood Ash</h3>
+        Rich in potassium and silica, acts as a pozzolan to enhance strength and durability.
+      </div>
+      <div class="box">
+        <h3>Water Glass</h3>
+        Provides the necessary alkalinity to initiate the geopolymerization process.
+      </div>
+      <div class="box">
+        <h3>Honey</h3>
+        Serves as a coagulant, improving workability and setting time, and potentially increasing resistance to
+        water and other environmental factors.
+      </div>
+
+    </div>
+    <div class="content">
+      This innovative combination, known as MondoSTONE Neopolymer, represents an exciting avenue for eco-friendly
+      construction practices, utilizing natural materials with minimal environmental impact.
+    </div>
+  </div>
   <div class="content">
+
     <h1>Exploring Geopolymers with MondoSTONE</h1>
     <h2>A Beginner's Guide</h2>
     <p></p>
     <div>
       <div style="float: left;">
-        <img src="media/geopolymer.jpg" class="image"
-          alt="Examples of geopolymer frameworks – Geopolymer Institute" />
+        <img src="media/geopolymer.jpg" class="image" alt="Examples of geopolymer frameworks – Geopolymer Institute" />
         <p class="imagetext">Chemical composition of standard geopolymer</p>
       </div>
       <p>Geopolymers
