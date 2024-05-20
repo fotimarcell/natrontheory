@@ -89,9 +89,17 @@
 
     .box {
       flex: 1 1 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: top;
+      align-items: center;
       margin: 20px;
       padding: 40px;
       background-color: lightgray;
+    }
+
+    .icon {
+      width: 80px;
     }
 
     @media (max-width: 1000px) {
@@ -158,14 +166,17 @@
     <h1 class="subheader" style="text-align: center; color: inherit;">Key Components and Benefits</h1>
     <div class="boxes">
       <div class="box">
+        <img src="media/fireicon.png" class="icon">
         <h3>Wood Ash</h3>
         Rich in potassium and silica, acts as a pozzolan to enhance strength and durability.
       </div>
       <div class="box">
+        <img src="media/wgicon.png" class="icon">
         <h3>Water Glass</h3>
         Provides the necessary alkalinity to initiate the geopolymerization process.
       </div>
       <div class="box">
+        <img src="media/honeyicon.png" class="icon">
         <h3>Honey</h3>
         Serves as a coagulant, improving workability and setting time, and potentially increasing resistance to
         water and other environmental factors.
@@ -179,7 +190,7 @@
   </div>
 <div class="content">
   <h1 class="subheader" style="text-align: center; color: inherit;">Step by step tutorial video</h1>
-  <video src="media/instructions.MOV" controls poster="media/poster.jpg" playsinline style="width: 100%;"></video>
+  <video src="media/intro.mp4" controls poster="media/intro.jpg" playsinline style="width: 100%;"></video>
 </div>
   <div class="content">
     <h1>Exploring Geopolymers with MondoSTONE</h1>
