@@ -1,16 +1,56 @@
 <!DOCTYPE html>
-
-<body>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Képgaléria</title>
     <style>
-input[type='range'] {
-  /* A "kitöltött" rész és a fogó színének beállítása */
-  accent-color: green;
-}
-
-</style>
-    <div class="chrome">
-        <input id="myinput" min="0" max="60" type="range" value="30">
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .gallery-container {
+            width: 80%;
+            overflow-x: scroll; /* Allows horizontal scrolling */
+            overflow-y: hidden; /* Prevents vertical scrolling */
+            white-space: nowrap;
+            border: 2px solid #ddd;
+            padding: 50px;
+            background-color: #fff;
+            scroll-behavior: smooth;
+        }
+        .gallery-container::-webkit-scrollbar {
+            display: none; /* Hide scroll bar for Chrome, Safari, and Opera */
+        }
+        .gallery-container {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        .gallery-container img {
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            margin-right: 50px;
+            transition: transform 0.2s;
+        }
+        .gallery-container img:hover {
+            transform: scale(1.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <img src="https://via.placeholder.com/200" alt="Album 1">
+        <img src="https://via.placeholder.com/200" alt="Album 2">
+        <img src="https://via.placeholder.com/200" alt="Album 3">
+        <img src="https://via.placeholder.com/200" alt="Album 4">
+        <img src="https://via.placeholder.com/200" alt="Album 5">
+        <img src="https://via.placeholder.com/200" alt="Album 6">
     </div>
 </body>
-
 </html>
