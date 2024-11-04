@@ -1,4 +1,4 @@
-const image = document.getElementById('zoomable-image');
+const image = document.getElementById('media');
 const container = document.getElementById('image-container');
 let isZoomed = false;
 let isDragging = false;
@@ -86,3 +86,4 @@ window.addEventListener('mouseup', (e) => {
 image.addEventListener('touchstart', startDrag);
 image.addEventListener('touchend', endDrag);
 window.addEventListener('touchmove', drag);
+
