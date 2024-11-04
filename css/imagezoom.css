@@ -1,0 +1,35 @@
+body, html {
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    text-align: center;
+    background-color: #336;
+    color: #fff;
+    padding: 10px;
+}
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+    cursor: grab;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.3s;
+    cursor: grab;
+    position: relative;
+}
+.footer {
+    text-align: center;
+    background-color: #336;
+    color: #fff;
+    padding: 10px;
+}
