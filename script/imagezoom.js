@@ -23,7 +23,7 @@ image.addEventListener('click', () => {
         currentY = 0;
     } else {
         console.log('Zoom in triggered');
-        image.style.transform = 'scale(2)';
+        image.style.transform = 'scale(3)';
         container.style.cursor = 'move';
         image.style.cursor = 'move';
         isZoomed = true;
@@ -61,7 +61,7 @@ function drag(e) {
         currentX = event.clientX - startX;
         currentY = event.clientY - startY;
         console.log(`Dragging - currentX: ${currentX}, currentY: ${currentY}`);
-        image.style.transform = `scale(2) translate(${currentX}px, ${currentY}px)`;
+        image.style.transform = `scale(3) translate(${currentX}px, ${currentY}px)`;
     }
 }
 
