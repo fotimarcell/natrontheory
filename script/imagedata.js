@@ -7,7 +7,7 @@ const imageData = [
     { id: 'v_10_molten', src: 'media/v_10_molten.mp4', description: 'Molten natron boiling in a tin can' },
     { id: 'v_12_sigiriya', src: 'media/v_12_sigiriya.jpg', description: 'Sigiriya, a huge granite rock "carved"' },
     { id: 'v_14_quenco', src: 'media/v_14_quenco.jpg', description: 'Quenco, a bit unusual "ceremonial place"' },
-    { id: 'v_15_bomarso', src: 'media/v_15_bomarso.jpg', description: 'Bomarso, Italy, stairs to heaven/nowhere' },
+    { id: 'v_15_bomarzo', src: 'media/v_15_bomarzo.jpg', description: 'Bomarzo, Italy, stairs to heaven/nowhere' },
     { id: 'aaa', src: 'bbb', description: 'ccc' }
     // Vesszőőőő!
 ];
