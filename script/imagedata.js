@@ -10,6 +10,7 @@ const imageData = [
     { id: 'v_15_bomarzo', src: 'media/v_15_bomarzo.jpg', description: 'Bomarzo, Italy, stairs to heaven/nowhere' },
     { id: 'v_17_stone59', src: 'media/v_17_stone59.jpg', description: 'Scoopmarks on Stone 59, Stonehenge' },
     { id: 'v_18_stone60', src: 'media/v_18_stone60.jpg', description: 'Stone 60 The Outlier, Stonehenge' },
+    { id: 'v_20_coating', src: 'media/v_20_coating.mp4', description: 'Not polishing, coating. Coating with waterglass.' },
     { id: 'aaa', src: 'bbb', description: 'ccc' }
     // Vesszőőőő!
 ];
