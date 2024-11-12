@@ -8,6 +8,7 @@ const imageData = [
     { id: 'v_12_sigiriya', src: 'media/v_12_sigiriya.jpg', description: 'Sigiriya, a huge granite rock "carved"' },
     { id: 'v_14_quenco', src: 'media/v_14_quenco.jpg', description: 'Quenco, a bit unusual "ceremonial place"' },
     { id: 'v_15_bomarzo', src: 'media/v_15_bomarzo.jpg', description: 'Bomarzo, Italy, stairs to heaven/nowhere' },
+    { id: 'v_16_stone59', src: 'media/v_16_stone59.jpg', description: 'Scoopmarks on Stone 59, Stonehenge' },
     { id: 'aaa', src: 'bbb', description: 'ccc' }
     // Vesszőőőő!
 ];
