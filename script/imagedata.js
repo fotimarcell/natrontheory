@@ -10,6 +10,7 @@ const imageData = [
     { id: 'iv_1_menhir', src: 'media/iv_1_menhir.jpg', description: 'Menhir da Meada, Spain' },
     { id: 'iv_2_limestone', src: 'media/iv_2_limestone.mp4', description: 'Natural limestone found below a fire pit' },
     { id: 'iv_3_dolmen', src: 'media/iv_3_dolmen.jpg', description: 'Dolmen en el parque de Bens, La Coruña, Spain' },
+    { id: 'iv_4_castle', src: 'media/iv_4_castle.jpg', description: 'Castle of Neuschwanstein, Germany' },
     { id: 'v_1_pouring', src: 'media/v_1_pouring.mp4', description: 'Pouring molten natron onto a granite slab' },
     { id: 'v_2_scoop', src: 'media/v_2_scoops.jpg', description: 'Scoop marks on and around the Unfinished Obelisk' },
     { id: 'v_4_impala', src: 'media/v_4_impala.jpg', description: 'Impala black granite chemically etched with molten natron' },
