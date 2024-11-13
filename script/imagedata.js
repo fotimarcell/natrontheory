@@ -5,6 +5,7 @@ const imageData = [
     { id: 'ii_6_pamukkale', src: 'media/ii_6_pamukkale.jpg', description: 'Natural limestone precipitation in Pamukkale, Turkey' },
     { id: 'ii_7_salinity', src: 'media/ii_7_salinity.jpg', description: 'Soil salinization at work' },
     { id: 'ii_8_koh', src: 'media/ii_8_koh.jpg', description: 'Etching granite with potassium hydroxide, 406 degrees Celsius' },
+    { id: 'ii_9_chemical', src: 'media/ii_9_chemical.jpg', description: 'Beautiful chemical garden made from waterglass' },
     { id: 'v_1_pouring', src: 'media/v_1_pouring.mp4', description: 'Pouring molten natron onto a granite slab' },
     { id: 'v_2_scoop', src: 'media/v_2_scoops.jpg', description: 'Scoop marks on and around the Unfinished Obelisk' },
     { id: 'v_4_impala', src: 'media/v_4_impala.jpg', description: 'Impala black granite chemically etched with molten natron' },
