@@ -29,11 +29,12 @@ image.addEventListener('click', (e) => {
         const offsetX = e.clientX - rect.left;
         const offsetY = e.clientY - rect.top;
 
-        // Calculate translation to center the clicked point
-        currentX = -((offsetX * 3) - (rect.width / 2));
-        currentY = -((offsetY * 3) - (rect.height / 2));
+        // Adjust translation to center the clicked point, accounting for the zoom level
+        const zoomLevel = 4;
+        currentX = -((offsetX * (zoomLevel - 1)) - (rect.width / 2) * (zoomLevel - 1) / zoomLevel);
+        currentY = -((offsetY * (zoomLevel - 1)) - (rect.height / 2) * (zoomLevel - 1) / zoomLevel);
 
-        image.style.transform = `scale(4) translate(${currentX}px, ${currentY}px)`;
+        image.style.transform = `scale(${zoomLevel}) translate(${currentX}px, ${currentY}px)`;
         container.style.cursor = 'move';
         image.style.cursor = 'move';
         isZoomed = true;
