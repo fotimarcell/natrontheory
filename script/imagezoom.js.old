@@ -6,7 +6,7 @@ let startX, startY;
 let currentX = 0, currentY = 0;
 let wasDragged = false;
 
-image.addEventListener('click', (e) => {
+image.addEventListener('click', () => {
     if (wasDragged) {
         console.log('Click ignored due to drag');
         wasDragged = false; // Reset after drag
@@ -23,17 +23,7 @@ image.addEventListener('click', (e) => {
         currentY = 0;
     } else {
         console.log('Zoom in triggered');
-
-        // Calculate the click position relative to the image
-        const rect = image.getBoundingClientRect();
-        const offsetX = e.clientX - rect.left;
-        const offsetY = e.clientY - rect.top;
-
-        // Calculate translation to center the clicked point
-        currentX = -((offsetX * 3) - (rect.width / 2));
-        currentY = -((offsetY * 3) - (rect.height / 2));
-
-        image.style.transform = `scale(4) translate(${currentX}px, ${currentY}px)`;
+        image.style.transform = 'scale(4)';
         container.style.cursor = 'move';
         image.style.cursor = 'move';
         isZoomed = true;
@@ -96,3 +86,4 @@ window.addEventListener('mouseup', (e) => {
 image.addEventListener('touchstart', startDrag);
 image.addEventListener('touchend', endDrag);
 window.addEventListener('touchmove', drag);
+
