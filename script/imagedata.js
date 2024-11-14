@@ -12,7 +12,6 @@ const imageData = [
     { id: 'iv_3_dolmen', src: 'media/iv_3_dolmen.jpg', description: 'Dolmen en el parque de Bens, La Coruña, Spain' },
     { id: 'iv_4_castle', src: 'media/iv_4_castle.jpg', description: 'Castle of Neuschwanstein, Germany' },
     { id: 'iv_5_machu', src: 'media/iv_5_machu.jpg', description: 'Imprints of wooden boards on a wall in Machu Picchu, Peru' },
-    { id: 'iv_6_sacsa', src: 'media/iv_6_sacsa.jpg', description: 'Strange stone "carving" error in Sacsayhuaman, Peru' },
     { id: 'v_1_pouring', src: 'media/v_1_pouring.mp4', description: 'Pouring molten natron onto a granite slab' },
     { id: 'v_2_scoop', src: 'media/v_2_scoops.jpg', description: 'Scoop marks on and around the Unfinished Obelisk' },
     { id: 'v_4_impala', src: 'media/v_4_impala.jpg', description: 'Impala black granite chemically etched with molten natron' },
@@ -25,6 +24,7 @@ const imageData = [
     { id: 'v_17_stone59', src: 'media/v_17_stone59.jpg', description: 'Scoopmarks on Stone 59, Stonehenge' },
     { id: 'v_18_stone60', src: 'media/v_18_stone60.jpg', description: 'Stone 60 The Outlier, Stonehenge' },
     { id: 'v_20_coating', src: 'media/v_20_coating.mp4', description: 'Not polishing, coating. Coating with waterglass.' },
+    { id: 'vi_6_sacsa', src: 'media/vi_6_sacsa.jpg', description: 'Strange stone "carving" error in Sacsayhuaman, Peru' },
     { id: 'aaa', src: 'bbb', description: 'ccc' }
     // Vesszőőőő!
 ];
