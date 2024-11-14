@@ -24,15 +24,15 @@ image.addEventListener('click', (e) => {
     } else {
         console.log('Zoom in triggered');
 
-        // Calculate the click position relative to the image
         const rect = image.getBoundingClientRect();
         const offsetX = e.clientX - rect.left;
         const offsetY = e.clientY - rect.top;
 
-        // Adjust translation to center the clicked point, accounting for the zoom level
         const zoomLevel = 4;
-        currentX = -((offsetX * (zoomLevel - 1)) - (rect.width / 2) * (zoomLevel - 1) / zoomLevel);
-        currentY = -((offsetY * (zoomLevel - 1)) - (rect.height / 2) * (zoomLevel - 1) / zoomLevel);
+        
+        // Calculate translation, centering on the click point with zoom scaling
+        currentX = -((offsetX - rect.width / 2) * (zoomLevel - 1)) / zoomLevel;
+        currentY = -((offsetY - rect.height / 2) * (zoomLevel - 1)) / zoomLevel;
 
         image.style.transform = `scale(${zoomLevel}) translate(${currentX}px, ${currentY}px)`;
         container.style.cursor = 'move';
