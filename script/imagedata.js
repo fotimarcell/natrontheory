@@ -33,6 +33,7 @@ const imageData = [
     { id: 'vi_14_utah', src: 'media/vi_14_utah.jpg', description: 'Hand prints in a rock wall, Utah, USA' },
     { id: 'vi_16_rosetta', src: 'media/vi_16_rosetta.jpg', description: 'Rosette Stone front and back' },
     { id: 'vii_2_woman', src: 'media/vii_2_woman.jpg', description: 'The Pregnant Woman stone in Baalbek, Lebanon' },
+    { id: 'vii_3_obelisk', src: 'media/vii_3_obelisk.jpg', description: 'The color of the Unfinished Obelisk is different' },
     { id: 'aaa', src: 'bbb', description: 'ccc' }
     // Vesszőőőő!
 ];
