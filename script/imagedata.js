@@ -32,6 +32,7 @@ const imageData = [
     { id: 'vi_12_cutimbo', src: 'media/vi_12_cutimbo.jpg', description: '"Carved" figurines on a stone. Cutimbo, Peru.' },
     { id: 'vi_14_utah', src: 'media/vi_14_utah.jpg', description: 'Hand prints in a rock wall, Utah, USA' },
     { id: 'vi_16_rosetta', src: 'media/vi_16_rosetta.jpg', description: 'Rosette Stone front and back' },
+    { id: 'vii_2_woman', src: 'media/vii_2_woman.jpg', description: 'The Pregnant Woman stone in Baalbek, Lebanon' },
     { id: 'aaa', src: 'bbb', description: 'ccc' }
     // Vesszőőőő!
 ];
