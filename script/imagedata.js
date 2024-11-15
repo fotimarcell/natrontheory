@@ -29,6 +29,7 @@ const imageData = [
     { id: 'vi_8_bench', src: 'media/vi_8_bench.jpg', description: '...' },
     { id: 'vi_10_sillustani', src: 'media/vi_10_sillustani.jpg', description: 'Absolutely horrible stone masonry at Sillustani, Peru' },
     { id: 'vi_11_holes', src: 'media/vi_11_holes.jpg', description: 'Precision holes "carved" in between the cast stones' },
+    { id: 'vi_12_cutimbo', src: 'media/vi_12_cutimbo.jpg', description: '"Carved" figurines on a stone. Cutimbo, Peru.' },
     { id: 'aaa', src: 'bbb', description: 'ccc' }
     // Vesszőőőő!
 ];
