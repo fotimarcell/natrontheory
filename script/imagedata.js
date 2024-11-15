@@ -28,6 +28,7 @@ const imageData = [
     { id: 'vi_7_hidro', src: 'media/vi_7_hidro.mp4', description: 'Silica hydrogel made from waterglass and baking soda' },
     { id: 'vi_8_bench', src: 'media/vi_8_bench.jpg', description: '...' },
     { id: 'vi_10_sillustani', src: 'media/vi_10_sillustani.jpg', description: 'Absolutely horrible stone masonry at Sillustani, Peru' },
+    { id: 'vi_11_holes', src: 'media/vi_11_holes.jpg', description: 'Precision holes "carved" in between the cast stones' },
     { id: 'aaa', src: 'bbb', description: 'ccc' }
     // Vesszőőőő!
 ];
