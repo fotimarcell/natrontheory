@@ -31,6 +31,7 @@ const imageData = [
     { id: 'vi_11_holes', src: 'media/vi_11_holes.jpg', description: 'Precision holes "carved" in between the cast stones' },
     { id: 'vi_12_cutimbo', src: 'media/vi_12_cutimbo.jpg', description: '"Carved" figurines on a stone. Cutimbo, Peru.' },
     { id: 'vi_14_utah', src: 'media/vi_14_utah.jpg', description: 'Hand prints in a rock wall, Utah, USA' },
+    { id: 'vi_16_rosetta', src: 'media/vi_16_rosetta.jpg', description: 'Rosette Stone front and back' },
     { id: 'aaa', src: 'bbb', description: 'ccc' }
     // Vesszőőőő!
 ];
