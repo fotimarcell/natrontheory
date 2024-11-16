@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoom Prompt</title>
+  <style>
+    /* Alap stílusok */
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Kép helye */
+    #main-image {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Prompt szöveg */
+    #zoom-prompt {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      opacity: 1;
+      transition: opacity 1s ease-out; /* Fokozatos elhalványulás */
+    }
+
+    /* Elhalványulás után */
+    .hidden {
+      display: none; /* Az animáció végén eltünteti */
+    }
+
+    /* Elhalványulás effekt */
+    .fading-out {
+      opacity: 0; /* Az animáció végső állapota */
+    }
+  </style>
+</head>
+<body>
+  <div id="zoom-prompt">Click anywhere to zoom in</div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const prompt = document.getElementById('zoom-prompt');
+
+      // Mobil eszköz detektálása
+      const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+      if (isMobile) {
+        prompt.textContent = 'Tap anywhere to zoom in';
+      }
+
+      // Prompt mutatása
+      setTimeout(() => {
+        prompt.classList.add('fading-out'); // Elhalványulás indítása
+
+        // Amikor az animáció véget ér, teljesen eltünteti
+        prompt.addEventListener('transitionend', () => {
+          prompt.classList.add('hidden');
+        }, { once: true }); // Csak egyszer fusson le
+      }, 3000);
+    });
+  </script>
+</body>
+</html>

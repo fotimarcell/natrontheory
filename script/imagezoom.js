@@ -29,7 +29,7 @@ image.addEventListener('click', (e) => {
         const offsetY = e.clientY - rect.top;
 
         const zoomLevel = 4;
-        
+
         // Calculate translation, centering on the click point with zoom scaling
         currentX = -((offsetX - rect.width / 2) * (zoomLevel - 1)) / zoomLevel;
         currentY = -((offsetY - rect.height / 2) * (zoomLevel - 1)) / zoomLevel;
@@ -97,3 +97,25 @@ window.addEventListener('mouseup', (e) => {
 image.addEventListener('touchstart', startDrag);
 image.addEventListener('touchend', endDrag);
 window.addEventListener('touchmove', drag);
+
+document.addEventListener('DOMContentLoaded', function() {
+    var overlayMessage = document.getElementById('overlayMessage');
+
+    // Mobil eszköz detektálása
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+        overlayMessage.textContent = 'Tap anywhere to zoom in';
+    } else {
+        overlayMessage.textContent = 'Click anywhere to zoom in';
+    }
+
+    // Üzenet megjelenítése pár másodpercig, majd halványulva eltűnik
+    setTimeout(function() {
+        overlayMessage.style.opacity = '0';
+    }, 1000); // 3 másodpercig látható
+
+    // Az üzenet eltávolítása a DOM-ból a halványulás után
+    overlayMessage.addEventListener('transitionend', function() {
+        overlayMessage.parentNode.removeChild(overlayMessage);
+    });
+});
