@@ -7,6 +7,7 @@ const imageData = [
     { id: 'ii_8_koh', src: 'media/ii_8_koh.jpg', description: 'Etching granite with potassium hydroxide, 406 degrees Celsius' },
     { id: 'ii_9_chemical', src: 'media/ii_9_chemical.jpg', description: 'Beautiful chemical garden made from waterglass' },
     { id: 'ii_10_coin', src: 'media/ii_10_coin.jpg', description: 'The first ever Coin Excalibur in the 21st century' },
+    { id: 'ii_13_below', src: 'media/ii_13_below.jpg', description: 'The Unfinished Obelix from below' },
     { id: 'iv_1_menhir', src: 'media/iv_1_menhir.jpg', description: 'Menhir da Meada, Spain' },
     { id: 'iv_2_limestone', src: 'media/iv_2_limestone.mp4', description: 'Natural limestone found below a fire pit' },
     { id: 'iv_3_dolmen', src: 'media/iv_3_dolmen.jpg', description: 'Dolmen en el parque de Bens, La Coruña, Spain' },
