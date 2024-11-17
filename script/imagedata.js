@@ -13,6 +13,7 @@ const imageData = [
     { id: 'iv_4_castle', src: 'media/iv_4_castle.jpg', description: 'Castle of Neuschwanstein, Germany' },
     { id: 'iv_5_machu', src: 'media/iv_5_machu.jpg', description: 'Imprints of wooden boards on a wall in Machu Picchu, Peru' },
     { id: 'iv_6_scoop', src: 'media/iv_6_scoop.jpg', description: 'Scoop marks in Ollantaytambo, Peru' },
+    { id: 'iv_7_dolmen', src: 'media/iv_7_dolmen.jpg', description: 'Beautifully "carved" dolmen in Gelendzhik, Russia' },
     { id: 'v_1_pouring', src: 'media/v_1_pouring.mp4', description: 'Pouring molten natron onto a granite slab' },
     { id: 'v_2_scoop', src: 'media/v_2_scoops.jpg', description: 'Scoop marks on and around the Unfinished Obelisk' },
     { id: 'v_4_impala', src: 'media/v_4_impala.jpg', description: 'Impala black granite chemically etched with molten natron' },
