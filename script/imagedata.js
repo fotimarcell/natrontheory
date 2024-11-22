@@ -42,6 +42,7 @@ const imageData = [
     { id: 'vi_18_stone', src: 'media/vi_18_stone.jpg', description: 'Deep depressions on hard basalt, Ollaytantambo, Peru' },
     { id: 'vi_19_bench', src: 'media/vi_19_bench.jpg', description: 'The famous stone bench in Cusco, Peru' },
     { id: 'vi_20_stone', src: 'media/vi_20_stone.jpg', description: 'Stone in stone, Cusco, Peru' },
+    { id: 'vi_21_sphere', src: 'media/vi_21_sphere.jpg', description: 'Sand spheres made using a coffee cup' },
     { id: 'vii_2_woman', src: 'media/vii_2_woman.jpg', description: 'The Pregnant Woman stone in Baalbek, Lebanon' },
     { id: 'vii_3_obelisk', src: 'media/vii_3_obelisk.jpg', description: 'The color of the Unfinished Obelisk is different' },
     { id: 'vii_4_moai', src: 'media/vii_4_moai.jpg', description: 'Moai statues are carved?' },
