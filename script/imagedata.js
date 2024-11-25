@@ -49,6 +49,7 @@ const imageData = [
     { id: 'vii_2_woman', src: 'media/vii_2_woman.jpg', description: 'The Pregnant Woman stone in Baalbek, Lebanon' },
     { id: 'vii_3_obelisk', src: 'media/vii_3_obelisk.jpg', description: 'The color of the Unfinished Obelisk is different' },
     { id: 'vii_4_moai', src: 'media/vii_4_moai.jpg', description: 'Moai statues are carved?' },
+    { id: 'nub_1_cusco', src: 'media/nub_1_cusco.jpg', description: 'The Twelve Angled Stone in Cusco' },
     { id: 'aaa', src: 'bbb', description: 'ccc' }
     // Vesszőőőő!
 ];
