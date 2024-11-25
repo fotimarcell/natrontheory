@@ -33,7 +33,6 @@ const imageData = [
     { id: 'v_18_stone60', src: 'media/v_18_stone60.jpg', description: 'Stone 60 The Outlier, Stonehenge' },
     { id: 'v_20_coating', src: 'media/v_20_coating.mp4', description: 'Not polishing, coating. Coating with waterglass.' },
     { id: 'v_21_akna', src: 'media/v_21_akna.jpg', description: 'Settling pit' },
-    { id: 'techzelle', src: 'media/techzelle.jpg', description: 'Settling pit' },
     { id: 'vi_6_sacsa', src: 'media/vi_6_sacsa.jpg', description: 'Strange stone "carving" error in Sacsayhuaman, Peru' },
     { id: 'vi_7_hidro', src: 'media/vi_7_hidro.mp4', description: 'Silica hydrogel made from waterglass and baking soda' },
     { id: 'vi_8_bench', src: 'media/vi_8_bench.jpg', description: '...' },
