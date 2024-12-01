@@ -14,6 +14,7 @@ const imageData = [
     { id: 'iii_5_100kg', src: 'media/iii_5_100kg.mp4', description: '"Official" 100 kg weight test by the author' },
     { id: 'iii_6_boil', src: 'media/iii_6_boil.mp4', description: '20 minutes boiling test' },
     { id: 'iii_7_ramses', src: 'media/iii_7_ramses.jpg', description: 'Granite statue of Ramses III.' },
+    { id: 'iii_8_basalt', src: 'media/iii_8_basalt.jpg', description: 'Basalt statue of King Thutmoses III.' },
     { id: 'iv_1_menhir', src: 'media/iv_1_menhir.jpg', description: 'Menhir da Meada, Spain' },
     { id: 'iv_2_limestone', src: 'media/iv_2_limestone.mp4', description: 'Natural limestone found below a fire pit' },
     { id: 'iv_3_dolmen', src: 'media/iv_3_dolmen.jpg', description: 'Dolmen en el parque de Bens, La Coruña, Spain' },
