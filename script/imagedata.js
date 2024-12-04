@@ -58,6 +58,7 @@ const imageData = [
     { id: 'nub_1_cusco', src: 'media/nub_1_cusco.jpg', description: 'The Twelve Angled Stone in Cusco' },
     { id: 'nub_2_menkaure', src: 'media/nub_2_menkaure.jpg', description: 'Entry of the Menkaure Pyramid, Giza' },
     { id: 'nub_3_acropolis', src: 'media/nub_3_acropolis.jpg', description: 'Limestone wall at the Acropolis' },
+    { id: 'nub_4_yangshan', src: 'media/nub_4_yangshan.jpg', description: 'Giant nubs at the Yangshan Quarry, China' },
     { id: 'nub_5_ball', src: 'media/nub_5_ball.mp4', description: 'Artificial limestone ball from two liquids' },
     { id: 'aaa', src: 'bbb', description: 'ccc' }
     // Vesszőőőő!
