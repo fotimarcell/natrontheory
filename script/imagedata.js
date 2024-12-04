@@ -60,6 +60,7 @@ const imageData = [
     { id: 'nub_3_acropolis', src: 'media/nub_3_acropolis.jpg', description: 'Limestone wall at the Acropolis' },
     { id: 'nub_4_yangshan', src: 'media/nub_4_yangshan.jpg', description: 'Giant nubs at the Yangshan Quarry, China' },
     { id: 'nub_5_ball', src: 'media/nub_5_ball.mp4', description: 'Artificial limestone ball from two liquids' },
+    { id: 'granite_1_ball', src: 'media/granite_1_ball.mp4', description: 'Fake granite ball' },
     { id: 'aaa', src: 'bbb', description: 'ccc' }
     // Vesszőőőő!
 ];
