@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
             <div id="dropdown-content" style="display: none;">
             <a href="/">Home</a>
             <a href="geopolymer_calculator.html">Geopolymer Calculator</a>
-            <a href="map.html">Natron Map</a>
             </div>
         </div>
     </div>
