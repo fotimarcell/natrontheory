@@ -129,6 +129,11 @@ image.addEventListener('touchstart', startDrag);
 image.addEventListener('touchend', endDrag);
 window.addEventListener('touchmove', drag);
 
+document.body.addEventListener('touchmove', function(e) {
+    if (isZoomed) e.preventDefault();
+  }, { passive: false });
+  
+
 document.addEventListener('DOMContentLoaded', function() {
     var overlayMessage = document.getElementById('overlayMessage');
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
