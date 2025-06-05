@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,13 @@
     <link rel="stylesheet" href="../css/imagezoom.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
 </head>
+
 <body>
     <div class="header">The Natron Theory</div>
     <div class="image-container" id="image-container">
-        <img src=" " id="media" alt="Interactive Image" draggable="false">
+        <div id="image-wrapper">
+            <img src=" " id="media" alt="Interactive Image" draggable="false">
+        </div>
         <div id="overlayMessage">Click anywhere to zoom in</div>
     </div>
     <div class="footer" id="image-description">Error Loading Image</div>
@@ -20,4 +24,5 @@
     <script src="../script/imagezoom.js"></script>
     <script src="../script/medialoader.js"></script>
 </body>
+
 </html>
