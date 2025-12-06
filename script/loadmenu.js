@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div id="dropdown-content" style="display: none;">
             <a href="/">Home</a>
             <a href="geopolymer_calculator.html">Geopolymer Calculator</a>
-            <a href="img/fake/Artificial granite secret recipe v3.0.pdf">Fake granite recipe</a>
+            <a href="img/fake/Artificial granite secret recipe v3.0.pdf" target="_blank">Fake granite recipe</a>
             </div>
         </div>
     </div>
