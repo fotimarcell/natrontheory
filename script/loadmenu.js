@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <a href="/">Home</a>
             <a href="geopolymer_calculator.html">Geopolymer Calculator</a>
             <a href="case_splittrap.html">The Split Trap</a>
+            <a href="recipe_potassium.html">Recipe: Potassium Waterglass</a>
             <a href="img/fake/Artificial granite secret recipe v3.0.pdf" target="_blank">Fake granite recipe (pdf)</a>
             </div>
         </div>
