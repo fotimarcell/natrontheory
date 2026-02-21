@@ -9,7 +9,7 @@
         content="NatronTheory presents how our ancestors were capable of superhuman feats, both in terms of massive stone carvings and the transportation of gigantic statues weighing several hundred tons. Spoiler alert: they did it more with brains than brawn!" />
     <meta property="og:image" content="https://natrontheory.com/img/og_image.jpg" />
 
-    <title data-i18n="index.title">The Natron Theory</title>
+    <title>The Natron Theory</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
     <script src="script/utility.js"></script>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="index.title">The Natron Theory</title>
+    <title>The Natron Theory</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
     <style>
@@ -21,7 +21,7 @@
 
     <div class="csik mobil-margok">
         <div class="szurkecsik">
-            <div data-i18n="domino1_granite.section_6" class="title">First domino</div>
+            <div class="title">First domino</div>
             <div class="fofofotitle">The Granite "Mistake"</div>
         </div>
     </div>
@@ -29,7 +29,7 @@
     <div class="container">
         <div class="row">
             <div class="text baljobbkeret">
-                <div data-i18n="domino1_granite.section_6" class="padder">Granite, which has a hardness of 7 on the Mohs scale, is so hard that no acid or
+                <div class="padder">Granite, which has a hardness of 7 on the Mohs scale, is so hard that no acid or
                     alkali can harm it. Our ancestors had to use copper chisels and stone tools to carve granite.
                     <br /><br>
                     <b>WRONG!</b><br>
@@ -41,7 +41,7 @@
         <div class="row reverse">
             <div class="text baljobbkeret">
                 <div class="padder">
-                    <p data-i18n="domino1_granite.section_6">Hydrofluoric acid?</p>
+                    <p>Hydrofluoric acid?</p>
                     Yeah, for the sake of completeness, there is an acid that etches granite. But...<br><br>
                     Hydrofluoric acid is nearly impossible to store because it corrodes everything, including glass,
                     ceramics, and

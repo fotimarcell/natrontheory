@@ -1,0 +1,84 @@
+{
+  "filesScanned": 16,
+  "totalFound": 69,
+  "warnings": [
+    {
+      "key": "carvings.section_5",
+      "file": "C:\\Work\\natrontheory\\carvings.html",
+      "existing": "Fourth domino",
+      "found": "<p data-i18n=\"carvings.section_5\">Petra, Jordan</p>\r\n                    The huge ancient stone carvings have always amazed modern people. How did they do it? With copper\r\n                    chisels? That's impressive! A superhuman feat! But what if our ancestors weren't that crazy\r\n                    and\r\n                    instead chose an easier method?<br><br>\r\n                    Let's assume they were aware of the stone-etching function of molten natron.\r\n                    However, for \"carvings\" of such magnitude, they would have almost needed an unlimited supply of\r\n                    natron.<br><br>Let's see, how far is the nearest\r\n                    unlimited natron deposit from Petra!"
+    },
+    {
+      "key": "case_splittrap.section_7",
+      "file": "C:\\Work\\natrontheory\\case_splittrap.html",
+      "existing": "Investigations",
+      "found": "<p data-i18n=\"case_splittrap.section_7\">The Mission</p>\r\n                    In July 2025, armed with an XRF device, I traveled to Croatia to find out whether the\r\n                    limestone blocks with nubs contain any foreign material — in other words, whether they’re natural or\r\n                    man-made.\r\n                    <br><br>\r\n                    This device can determine which atoms are present in a thin surface layer of a material by analyzing\r\n                    its X-ray backscatter. Since my artificial stone mixture contains potassium, that’s exactly what I\r\n                    was looking for in the ancient stones."
+    },
+    {
+      "key": "domino1_granite.section_6",
+      "file": "C:\\Work\\natrontheory\\domino1_granite.html",
+      "existing": "First domino",
+      "found": "Granite, which has a hardness of 7 on the Mohs scale, is so hard that no acid or\r\n                    alkali can harm it. Our ancestors had to use copper chisels and stone tools to carve granite.\r\n                    <br /><br>\r\n                    <b>WRONG!</b><br>\r\n                    Many different chemicals can damage granite, and among them there is also an acid."
+    },
+    {
+      "key": "domino1_granite.section_6",
+      "file": "C:\\Work\\natrontheory\\domino1_granite.html",
+      "existing": "First domino",
+      "found": "Hydrofluoric acid?"
+    },
+    {
+      "key": "domino2_scoopmarks.section_8",
+      "file": "C:\\Work\\natrontheory\\domino2_scoopmarks.html",
+      "existing": "Second domino",
+      "found": "<p data-i18n=\"domino2_scoopmarks.section_8\">The Unfinished Obelisk in Assuan, Egypt</p>\r\n                    The unfinished obelisk is a massive, 40 meters long, 1100-ton granite block, whose carving was\r\n                    inexplicably halted by our ancestors. This has provided a great opportunity for us to examine how\r\n                    they worked. <br><br>\r\n                    It's certain that they didn't do it the way a modern person would. There are all sorts of strange\r\n                    processing marks around the obelisk.<br><br>\r\n                    And the famous diorite \"pounding stones\", of course."
+    },
+    {
+      "key": "domino3_waterglass.section_2",
+      "file": "C:\\Work\\natrontheory\\domino3_waterglass.html",
+      "existing": "Third domino",
+      "found": "<p data-i18n=\"domino3_waterglass.section_2\">What is waterglass?</p>\r\n                    This substance is again a white powder, with the chemical formula Na2SiO3, and it's produced when\r\n                    natron (Na2CO3) breaks down the quartz (SiO2) in the given material. <br><br>It extracts the silicon\r\n                    from the stone\r\n                    and assimilates it. It eats quartz for breakfast, while it belches out CO2.<br><br>\r\n                    Na2CO3 + SiO2 = Na2SiO3 + CO2"
+    },
+    {
+      "key": "domino4_fakegranite.section_3",
+      "file": "C:\\Work\\natrontheory\\domino4_fakegranite.html",
+      "existing": "Fourth domino",
+      "found": "<p data-i18n=\"domino4_fakegranite.section_3\">Artificial stone v1.0</p>\r\n                    In the previous step, we created truly beautiful artificial stones using nothing but ancient\r\n                    materials — just waterglass and wood ash.\r\n                    <br><br>\r\n                    Yes, but the catch is that all these stones are grey, if not outright black.\r\n                    <br><br>\r\n                    True, wood ash is almost always gray,\r\n                    and it turns the stone gray (or even black) as well."
+    },
+    {
+      "key": "domino5_nubs.section_8",
+      "file": "C:\\Work\\natrontheory\\domino5_nubs.html",
+      "existing": "Fifth domino",
+      "found": "<p data-i18n=\"domino5_nubs.section_8\">What are megalithic nubs?</p>\r\n                    There is a globally observable phenomenon in megalithic architecture: the nubs—those protruding\r\n                    elements on huge stone blocks, like the ones in Ollantaytambo, Peru.\r\n                    <br><br>\r\n                    It takes a truly heroic effort to chisel off an inch of material from the entire surface of such\r\n                     a massive stone to create this protrusion. Or... maybe that's not how they were made?"
+    },
+    {
+      "key": "draft_dragging.section_5",
+      "file": "C:\\Work\\natrontheory\\draft_dragging.html",
+      "existing": "",
+      "found": "<p data-i18n=\"draft_dragging.section_5\">Abu Simbel</p>\r\n                    We have a great example showing how modern man is capable of transporting ancient, multi-ton\r\n                    sandstone\r\n                    colossi carved from a single stone from point A to B. <br><br>This occurred during the construction\r\n                    of the\r\n                    Aswan Dam, where several ancient Egyptian temples and giant statues had to be saved from flooding.\r\n                    In 1963,\r\n                    professionals transported two stone temples and these massive, single stone statues to a new place\r\n                    at Abu Simbel."
+    },
+    {
+      "key": "draft_kaolin.section_2",
+      "file": "C:\\Work\\natrontheory\\draft_kaolin.html",
+      "existing": "",
+      "found": "<p data-i18n=\"draft_kaolin.section_2\">The modern geopolymer</p>\r\n                    Let's review what modern geopolymers, or artificial stones, are made of.\r\n                    <ol style=\"text-align: left;\">\r\n                        <li>Waterglass - check, the Egyptians knew how to make waterglass.</li>\r\n                        <li>Metakaolin - a white substance that turns waterglass into stone</li>\r\n                    </ol>"
+    },
+    {
+      "key": "geopolymer_calculator.section_10",
+      "file": "C:\\Work\\natrontheory\\geopolymer_calculator.html",
+      "existing": "Introducing the \"famous\"",
+      "found": "<p data-i18n=\"geopolymer_calculator.section_10\">The Kriven Formula</p>\r\n                    Precise geopolymer formulas are hard to find on the Internet. Not because it is big secret but\r\n                    because\r\n                    the field is still in development (=chaos). One of the leading scientists is Waltraud M. Kriven,\r\n                    we'll use\r\n                    her formula on this page for our calculations. This one:\r\n                    <div style=\"display: inline; font-size: larger; margin: 1em\">\r\n                        M&bull;AlO<sub>2</sub>&bull;2SiO<sub>2</sub>&bull;5.5H<sub>2</sub>O"
+    },
+    {
+      "key": "index.exploring_geopolymers_with_mondostone",
+      "file": "C:\\Work\\natrontheory\\mondostone\\index.html",
+      "existing": "Introducing MondoSTONE",
+      "found": "A unique blend of wood ash, water glass, and honey used to create\r\n          geopolymers for\r\n          sustainable\r\n          construction materials."
+    },
+    {
+      "key": "recipe_potassium.section_3",
+      "file": "C:\\Work\\natrontheory\\recipe_potassium.html",
+      "existing": "Recipes",
+      "found": "<p>Ingredients</p>\r\n                    <ul>\r\n                        <li>200 grams of Potassium Hydroxide flakes (from a DIY shop where they sell soap making kits)\r\n                        </li>\r\n                        <li>300 grams of Silica Cat Litter, must be pure silica, SiO2!</li>\r\n                        <li>900 ml water</li>\r\n                    </ul>"
+    }
+  ]
+}

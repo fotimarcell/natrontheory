@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="proba.kp_megfordtsa">Kép megfordítása</title>
+  <title>Kép megfordítása</title>
   <style>
     /* A teljes konténer nézőpontja */
     .flip-container {
@@ -67,7 +67,7 @@
     </div>
     <div class="back">
       <!-- A szöveg itt -->
-      <p data-i18n="proba.ezt_a_szveget_ltod_ha_megfordtod">Ezt a szöveget látod, ha megfordítod!</p>
+      <p>Ezt a szöveget látod, ha megfordítod!</p>
     </div>
   </div>
 </div>

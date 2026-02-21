@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="index.title">The Natron Theory</title>
+    <title>The Natron Theory</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
     <style>
@@ -21,7 +21,7 @@
 
     <div id="top" class="csik mobil-margok">
         <div class="szurkecsik">
-            <div data-i18n="case_splittrap.section_7" class="title">Investigations</div>
+            <div class="title">Investigations</div>
             <div class="title" style="font-size: 50px;">The Split Trap</div>
         </div>
     </div>
@@ -29,8 +29,8 @@
     <div class="container">
         <div class="row reverse">
             <div class="text baljobbkeret">
-                <div data-i18n="case_splittrap.section_7" class="padder">
-                    <p data-i18n="case_splittrap.section_7">The Mission</p>
+                <div class="padder">
+                    <p>The Mission</p>
                     In July 2025, armed with an XRF device, I traveled to Croatia to find out whether the
                     limestone blocks with nubs contain any foreign material — in other words, whether they’re natural or
                     man-made.

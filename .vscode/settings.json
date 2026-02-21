@@ -1,0 +1,11 @@
+{
+    "liveServer.settings.port": 5500,
+    "liveServer.settings.root": "/",
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.donotShowInfoMsg": false,
+    "liveServer.settings.ignoreFiles": [
+        ".git/**",
+        "node_modules/**",
+        ".DS_Store"
+    ]
+}

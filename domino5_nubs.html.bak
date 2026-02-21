@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="index.title">The Natron Theory</title>
+    <title>The Natron Theory</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
     <style>
@@ -21,7 +21,7 @@
 
     <div class="csik mobil-margok">
         <div class="szurkecsik">
-            <div data-i18n="domino5_nubs.section_8" class="title">Fifth domino</div>
+            <div class="title">Fifth domino</div>
             <div class="fofofotitle">Megalithic Nubs</div>
         </div>
     </div>
@@ -33,8 +33,8 @@
     <div class="container">
         <div class="row">
             <div class="text baljobbkeret">
-                <div data-i18n="domino5_nubs.section_8" class="padder">
-                    <p data-i18n="domino5_nubs.section_8">What are megalithic nubs?</p>
+                <div class="padder">
+                    <p>What are megalithic nubs?</p>
                     There is a globally observable phenomenon in megalithic architecture: the nubs—those protruding
                     elements on huge stone blocks, like the ones in Ollantaytambo, Peru.
                     <br><br>

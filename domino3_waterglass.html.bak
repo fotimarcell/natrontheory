@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="index.title">The Natron Theory</title>
+    <title>The Natron Theory</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
     <style>
@@ -21,7 +21,7 @@
 
     <div id="top" class="csik mobil-margok">
         <div class="szurkecsik">
-            <div data-i18n="domino3_waterglass.section_2" class="title">Third domino</div>
+            <div class="title">Third domino</div>
             <div class="title" style="font-size: 50px;">Waterglass, geopolymers</div>
         </div>
     </div>
@@ -29,8 +29,8 @@
     <div class="container">
         <div class="row reverse">
             <div class="text baljobbkeret">
-                <div data-i18n="domino3_waterglass.section_2" class="padder">
-                    <p data-i18n="domino3_waterglass.section_2">What is waterglass?</p>
+                <div class="padder">
+                    <p>What is waterglass?</p>
                     This substance is again a white powder, with the chemical formula Na2SiO3, and it's produced when
                     natron (Na2CO3) breaks down the quartz (SiO2) in the given material. <br><br>It extracts the silicon
                     from the stone

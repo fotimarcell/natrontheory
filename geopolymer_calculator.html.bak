@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="geopolymer_calculator.the_geopolymer_calculator">The Geopolymer Calculator</title>
+    <title>The Geopolymer Calculator</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
     <script src="script/utility.js"></script>
@@ -175,7 +175,7 @@
     </script>
     <div id="top" class="csik mobil-margok">
         <div class="szurkecsik">
-            <div data-i18n="geopolymer_calculator.section_10" class="title">Introducing the "famous"</div>
+            <div class="title">Introducing the "famous"</div>
             <div class="title" style="font-size: 50px;">Geopolymer Calculator</div>
         </div>
     </div>
@@ -183,8 +183,8 @@
     <div class="container">
         <div class="row reverse">
             <div class="text baljobbkeret">
-                <div data-i18n="geopolymer_calculator.section_10" class="padder">
-                    <p data-i18n="geopolymer_calculator.section_10">The Kriven Formula</p>
+                <div class="padder">
+                    <p>The Kriven Formula</p>
                     Precise geopolymer formulas are hard to find on the Internet. Not because it is big secret but
                     because
                     the field is still in development (=chaos). One of the leading scientists is Waltraud M. Kriven,

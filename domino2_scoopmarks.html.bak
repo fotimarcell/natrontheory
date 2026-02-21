@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="index.title">The Natron Theory</title>
+    <title>The Natron Theory</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
     <style>
@@ -21,7 +21,7 @@
 
     <div id="top" class="csik mobil-margok">
         <div class="szurkecsik">
-            <div data-i18n="domino2_scoopmarks.section_8" class="title">Second domino</div>
+            <div class="title">Second domino</div>
             <div class="title" style="font-size: 50px;">The Scoop Marks Mystery</div>
         </div>
     </div>
@@ -29,8 +29,8 @@
     <div class="container">
         <div class="row reverse">
             <div class="text baljobbkeret">
-                <div data-i18n="domino2_scoopmarks.section_8" class="padder">
-                    <p data-i18n="domino2_scoopmarks.section_8">The Unfinished Obelisk in Assuan, Egypt</p>
+                <div class="padder">
+                    <p>The Unfinished Obelisk in Assuan, Egypt</p>
                     The unfinished obelisk is a massive, 40 meters long, 1100-ton granite block, whose carving was
                     inexplicably halted by our ancestors. This has provided a great opportunity for us to examine how
                     they worked. <br><br>

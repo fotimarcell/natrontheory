@@ -6,9 +6,17 @@
     padding: 50px;
     position: relative;
     margin: 0 auto;
-    min-height: 600px;
+    /* make each section exactly one viewport tall minus the sticky menu (40px) */
+    height: calc(100vh - 40px);
+    min-height: 0;
+    overflow: hidden;
     max-width: 800px;
     color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
 .dominocsik {
@@ -36,6 +44,11 @@
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Ensure section intro box is vertically centered inside full-height sections */
+.maincsik > .atracsos {
+    margin-top: 0;
 }
 
 .csik {
@@ -139,6 +152,82 @@ a:visited {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+}
+
+/* Nyelvzászló gombok */
+#language-switcher {
+    display: flex;
+    gap: 8px;
+    margin: 0 15px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.lang-flag {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px 8px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    border-radius: 4px;
+}
+
+.lang-flag:hover {
+    opacity: 1;
+}
+
+.lang-flag.active {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Flag SVG sizing */
+.flag-svg {
+    width: 20px;
+    height: auto;
+    display: block;
+    vertical-align: middle;
+}
+
+.lang-flag {
+    padding: 6px;
+    line-height: 0;
+}
+
+/* Mobil: engedélyezzük a törést vagy kisebb zászlókat */
+@media (max-width: 480px) {
+    #language-switcher {
+        /* lehetővé teszi, hogy a zászlók több sorba törjenek */
+        flex-wrap: wrap;
+        gap: 6px;
+        margin: 0 8px;
+        justify-content: flex-end;
+    }
+
+    .lang-flag {
+        padding: 4px;
+    }
+
+    /* kisebb SVG-k a helytakarékosságért */
+    .flag-svg {
+        width: 18px;
+    }
+}
+
+/* Alternatíva nagyon szűk kijelzőkre: vízszintes görgetés */
+@media (max-width: 340px) {
+    #language-switcher {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 4px;
+    }
+
+    /* kis stílus a görgetéshez: rejtse a scrollbarot ahol lehetséges */
+    #language-switcher::-webkit-scrollbar { height: 6px; }
+    #language-switcher::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 3px; }
 }
 
 .footfelirat {
@@ -484,5 +573,49 @@ tr:hover {
   @media (max-width: 1000px) {
     .back {
         line-height: normal;
+    }
+}
+
+/* 'Több' lenyíló stílusok */
+.lang-more-button {
+    display: none;
+    background: none;
+    border: none;
+    color: #fafafa;
+    font-size: 20px;
+    padding: 6px 8px;
+    cursor: pointer;
+}
+
+.lang-dropdown-inner {
+    background: #ffffff;
+    color: #000000;
+    border-radius: 6px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.lang-dropdown-inner .lang-flag {
+    display: block;
+    text-align: left;
+    padding: 6px;
+    background: transparent;
+    color: inherit;
+}
+
+@media (max-width: 480px) {
+    /* rejtsük a különálló zászló gombokat (kivéve az aktívat), és mutassuk a 'Több' gombot */
+    #language-switcher > .lang-flag {
+        display: none;
+    }
+    /* Az aktív (kiválasztott) zászló mindig látható marad mobilon */
+    #language-switcher > .lang-flag.active {
+        display: inline-block;
+    }
+    .lang-more-button {
+        display: inline-block;
     }
 }

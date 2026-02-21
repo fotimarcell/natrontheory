@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="index.title">The Natron Theory</title>
+    <title>The Natron Theory</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
     <style>
@@ -24,7 +24,7 @@
 
     <div id="top" class="csik mobil-margok">
         <div class="szurkecsik">
-            <div data-i18n="carvings.section_5" class="title">Fourth domino</div>
+            <div class="title">Fourth domino</div>
             <div class="title" style="font-size: 50px;">Huge scale rock carvings</div>
             <div><br>Warning! This will be more than X minutes long read, where X > 3 !</div>
         </div>
@@ -33,8 +33,8 @@
     <div class="container">
         <div class="row reverse">
             <div class="text baljobbkeret">
-                <div data-i18n="carvings.section_5" class="padder">
-                    <p data-i18n="carvings.section_5">Petra, Jordan</p>
+                <div class="padder">
+                    <p>Petra, Jordan</p>
                     The huge ancient stone carvings have always amazed modern people. How did they do it? With copper
                     chisels? That's impressive! A superhuman feat! But what if our ancestors weren't that crazy
                     and

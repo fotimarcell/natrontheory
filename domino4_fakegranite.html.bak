@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="index.title">The Natron Theory</title>
+    <title>The Natron Theory</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
     <style>
@@ -63,7 +63,7 @@
 
     <div id="top" class="csik mobil-margok">
         <div class="szurkecsik">
-            <div data-i18n="domino4_fakegranite.section_3" class="title">Fourth domino</div>
+            <div class="title">Fourth domino</div>
             <div class="title" style="font-size: 50px;">Ancient artificial granite</div>
         </div>
     </div>
@@ -77,8 +77,8 @@
     <div class="container">
         <div class="row">
             <div class="text baljobbkeret">
-                <div data-i18n="domino4_fakegranite.section_3" class="padder">
-                    <p data-i18n="domino4_fakegranite.section_3">Artificial stone v1.0</p>
+                <div class="padder">
+                    <p>Artificial stone v1.0</p>
                     In the previous step, we created truly beautiful artificial stones using nothing but ancient
                     materials — just waterglass and wood ash.
                     <br><br>
@@ -214,7 +214,7 @@
     <div class="graybox">
         <div class="text row padder">This isn’t empty talk — it’s a working recipe. In October–November 2025, dozens of volunteers from all around the world, from Thailand to Peru and New Zealand to the Czech Republic, tested the method to confirm it really works. In the collection of images below, I’ve gathered the most beautiful creations.
         </div>
-        <h1 data-i18n="index.image_gallery" class="subheader" style="text-align: center; color: inherit;">Image gallery</h1>
+        <h1 class="subheader" style="text-align: center; color: inherit;">Image gallery</h1>
         <div class="gallery-container">
             <img src="img/fake/gallery/golyo.jpeg">
             <img src="img/fake/gallery/torony.jpeg">

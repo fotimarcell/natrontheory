@@ -1,0 +1,69 @@
+Total keys: 341
+Duplicate groups: 12
+
+---
+Keys: menu.calculator, geopolymer_calculator.geopolymer_calculator
+Value:
+Geopolymer Calculator
+
+---
+Keys: menu.splittrap, case_splittrap.the_split_trap
+Value:
+The Split Trap
+
+---
+Keys: index.title, index.the_natron_theory, recipe_potassium.the_natron_theory, draft_kaolin.the_natron_theory, draft_dragging.the_natron_theory, domino1_granite.the_natron_theory, domino2_scoopmarks.the_natron_theory, domino3_waterglass.the_natron_theory, domino4_fakegranite.the_natron_theory, domino5_nubs.the_natron_theory, case_splittrap.the_natron_theory, carvings.the_natron_theory, image.the_natron_theory, video.the_natron_theory
+Value:
+The Natron Theory
+
+---
+Keys: index.natron_title, index.in_the_beginning_there_was_natron
+Value:
+In the beginning there was ... natron
+
+---
+Keys: index.glass_title, index.oh_and_one_more_thing
+Value:
+Oh, and one more thing!
+
+---
+Keys: index.uveges_title, index.what_is_glass_and_why_is_it_important
+Value:
+What is glass, and why is it important?
+
+---
+Keys: index.domino_title, index.they_found_a_bunch_of_dominos_that_can
+Value:
+They found a bunch of dominos that can be knocked over
+
+---
+Keys: index.image_gallery, domino4_fakegranite.image_gallery
+Value:
+Image gallery
+
+---
+Keys: recipe_potassium.ingredients, geopolymer_calculator.ingredients
+Value:
+Ingredients
+
+---
+Keys: domino3_waterglass.any_proof_of_ancient_waterglass_use_returning_to, carvings.any_proof_of_ancient_waterglass_use_returning_to
+Value:
+<p>Any proof of ancient waterglass use?</p> Returning to the original mural, we can see a white pile of something accumulating in the background. That something is contaminated with black specks. <br><br> Of course, it's contaminated because it's mixed with the remaining charcoal. Then this white substance is carried around in bags, poured out, and someone molds a wall out of it. <br><br>All this is depicted in a singe mural (of smelting metal)!
+
+---
+Keys: domino4_fakegranite.fourth_domino, carvings.fourth_domino
+Value:
+Fourth domino
+
+---
+Keys: carvings.section_9, carvings.section_12
+Value:
+<p>Where is the salt?</p>
+                    About 30 kilometers east of Derinkuyu, there is a vast saltwater lake called Yay Gölü, where salt
+                    extraction continues to this day with absolutely primitive methods. (Collecting it from the
+                    ground.)<br><br>
+                    BTW: why didn't they start carving the rock right at the lakeshore? Well, because there's usually no
+                    volcanic rock at the shores of carbonated lakes. This is a limestone area. We need to move from
+                    carbonate-rich soils to volcanic soils to
+                    find quartz to work with.

@@ -1,0 +1,148 @@
+[
+  {
+    "from": "geopolymer_calculator.geopolymer_calculator",
+    "to": "menu.calculator",
+    "files": []
+  },
+  {
+    "from": "case_splittrap.the_split_trap",
+    "to": "menu.splittrap",
+    "files": []
+  },
+  {
+    "from": "index.the_natron_theory",
+    "to": "index.title",
+    "files": []
+  },
+  {
+    "from": "recipe_potassium.the_natron_theory",
+    "to": "index.title",
+    "files": [
+      "C:\\Work\\natrontheory\\recipe_potassium.html"
+    ]
+  },
+  {
+    "from": "draft_kaolin.the_natron_theory",
+    "to": "index.title",
+    "files": [
+      "C:\\Work\\natrontheory\\draft_kaolin.html"
+    ]
+  },
+  {
+    "from": "draft_dragging.the_natron_theory",
+    "to": "index.title",
+    "files": [
+      "C:\\Work\\natrontheory\\draft_dragging.html"
+    ]
+  },
+  {
+    "from": "domino1_granite.the_natron_theory",
+    "to": "index.title",
+    "files": [
+      "C:\\Work\\natrontheory\\domino1_granite.html"
+    ]
+  },
+  {
+    "from": "domino2_scoopmarks.the_natron_theory",
+    "to": "index.title",
+    "files": [
+      "C:\\Work\\natrontheory\\domino2_scoopmarks.html"
+    ]
+  },
+  {
+    "from": "domino3_waterglass.the_natron_theory",
+    "to": "index.title",
+    "files": [
+      "C:\\Work\\natrontheory\\domino3_waterglass.html"
+    ]
+  },
+  {
+    "from": "domino4_fakegranite.the_natron_theory",
+    "to": "index.title",
+    "files": [
+      "C:\\Work\\natrontheory\\domino4_fakegranite.html"
+    ]
+  },
+  {
+    "from": "domino5_nubs.the_natron_theory",
+    "to": "index.title",
+    "files": [
+      "C:\\Work\\natrontheory\\domino5_nubs.html"
+    ]
+  },
+  {
+    "from": "case_splittrap.the_natron_theory",
+    "to": "index.title",
+    "files": [
+      "C:\\Work\\natrontheory\\case_splittrap.html"
+    ]
+  },
+  {
+    "from": "carvings.the_natron_theory",
+    "to": "index.title",
+    "files": [
+      "C:\\Work\\natrontheory\\carvings.html"
+    ]
+  },
+  {
+    "from": "image.the_natron_theory",
+    "to": "index.title",
+    "files": [
+      "C:\\Work\\natrontheory\\natrontheory_book\\image.html"
+    ]
+  },
+  {
+    "from": "video.the_natron_theory",
+    "to": "index.title",
+    "files": [
+      "C:\\Work\\natrontheory\\natrontheory_book\\video.html"
+    ]
+  },
+  {
+    "from": "index.in_the_beginning_there_was_natron",
+    "to": "index.natron_title",
+    "files": []
+  },
+  {
+    "from": "index.oh_and_one_more_thing",
+    "to": "index.glass_title",
+    "files": []
+  },
+  {
+    "from": "index.what_is_glass_and_why_is_it_important",
+    "to": "index.uveges_title",
+    "files": []
+  },
+  {
+    "from": "index.they_found_a_bunch_of_dominos_that_can",
+    "to": "index.domino_title",
+    "files": []
+  },
+  {
+    "from": "domino4_fakegranite.image_gallery",
+    "to": "index.image_gallery",
+    "files": [
+      "C:\\Work\\natrontheory\\domino4_fakegranite.html"
+    ]
+  },
+  {
+    "from": "geopolymer_calculator.ingredients",
+    "to": "recipe_potassium.ingredients",
+    "files": []
+  },
+  {
+    "from": "carvings.any_proof_of_ancient_waterglass_use_returning_to",
+    "to": "domino3_waterglass.any_proof_of_ancient_waterglass_use_returning_to",
+    "files": []
+  },
+  {
+    "from": "carvings.fourth_domino",
+    "to": "domino4_fakegranite.fourth_domino",
+    "files": []
+  },
+  {
+    "from": "carvings.section_12",
+    "to": "carvings.section_9",
+    "files": []
+  }
+]

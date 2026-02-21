@@ -1,0 +1,68 @@
+{
+  "index": {
+    "title": "The Natron Theory",
+    "image_gallery": "Image gallery",
+    "intro_text": "Once upon a time there was a desert. And in this desert, where logically nothing\r\n                should\r\n                happen, here humanity made its most important steps in development.",
+    "intro_button": "Next",
+    "natron_title": "In the beginning there was ... natron",
+    "natron_intro": "Natron is a kind of salt which was abundant in the Nile valley (now depleted). People have been hand-picking and\r\n                collecting it in baskets since ancient times.\r\n\r\n                Ancient Egyptians used natron for at least ten different purposes:",
+    "natron_uses_1": "Washing clothes, drying food, medical treatment, mouthwashing, ceramics, textile dyeing,\r\n                        insepticide,\r\n                        conserve papyrus, cosmetic and...",
+    "natron_uses_2": "Mummification, of course",
+    "glass_title": "Oh, and one more thing!",
+    "glass_text": "Natron was also used to create glass. So called \"natron glass\", which is still the\r\n                most\r\n                common format of glass we use today.\r\n                In fact, this happened way before the Egyptians even dreamed of having an empire. Between 5000 and 4000\r\n                BC they already created small glass amulets and glass beads*.",
+    "glass_note": "*Badarian culture",
+    "uveges_title": "What is glass, and why is it important?",
+    "uveges_text": "Natron glass is nothing more than natron, sand and limestone \"cooked\" together on\r\n                851\r\n                degrees Celsius.\r\n                Which means ​Egyptians were able to melt natron since the beginning of time**.",
+    "uveges_note": "**It's a - so called - \"fact\"",
+    "question": "Now tell me straight to my face, are you seriously saying that normal,\r\n                healthy\r\n                ancient men didn't try melting stones with molten natron, but only bothered with sand?",
+    "button_no": "Nope, they didn't",
+    "button_yes": "Yes, they tried it!",
+    "answer": "Of course they tried!<br />\r\n                    And what did they find?",
+    "domino_title": "They found a bunch of dominos that can be knocked over",
+    "domino_text": "Dominos like \"granite being so hard that it can't be damaged by any everyday\r\n                chemical\"\r\n                or how our ancestors transported stone blocks weighing several hundred tons over\r\n                hundreds of miles. <br />",
+    "domino_button": "Start Domino\r\n                Effect",
+    "start_here_-_chaos_art_introduction": "Start here - Chaos Art Introduction",
+    "exploring_geopolymers_with_mondostone": "Introducing MondoSTONE",
+    "mondostone_products_on_ebay": "Wood Ash",
+    "chemical_compositionof_waterglass": ""
+  },
+  "carvings": {
+    "section_5": "Fourth domino"
+  },
+  "case_splittrap": {
+    "section_7": "Investigations"
+  },
+  "domino1_granite": {
+    "section_6": "First domino"
+  },
+  "domino2_scoopmarks": {
+    "section_8": "Second domino"
+  },
+  "domino3_waterglass": {
+    "section_2": "Third domino"
+  },
+  "domino4_fakegranite": {
+    "section_3": "Fourth domino"
+  },
+  "domino5_nubs": {
+    "section_8": "Fifth domino"
+  },
+  "draft_dragging": {
+    "section_5": ""
+  },
+  "draft_kaolin": {
+    "section_2": ""
+  },
+  "geopolymer_calculator": {
+    "the_geopolymer_calculator": "The Geopolymer Calculator",
+    "section_10": "Introducing the \"famous\""
+  },
+  "proba": {
+    "kp_megfordtsa": "Kép megfordítása",
+    "ezt_a_szveget_ltod_ha_megfordtod": "Ezt a szöveget látod, ha megfordítod!"
+  },
+  "recipe_potassium": {
+    "section_3": "Recipes",
+    "section_1": "☠️Important safety warning☠️"
+  }
+}
