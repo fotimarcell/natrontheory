@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     var menuHtml = `
     <div class="menufelirat">
-        <div style="margin-left: 10px;"><a href="index.html" target="_top" data-i18n="menu.home">The Natron Theory</a></div>
+        <div style="margin-left: 10px;"><a href="index.html" target="_top" data-i18n="main">The Natron Theory</a></div>
         <div id="language-switcher">
           <button class="lang-flag" data-lang="en" onclick="setLanguage('en')" title="English">
             <svg class="flag-svg" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="English flag">
@@ -125,11 +125,10 @@ document.addEventListener('DOMContentLoaded', function () {
         <div id="hamburger-menu">
             <img src="img/hamburger.png" class="hambuci" alt="Menu" />
             <div id="dropdown-content" style="display: none;">
-            <a href="/" data-i18n="menu.home">Home</a>
-            <a href="geopolymer_calculator.html" data-i18n="menu.calculator">Geopolymer Calculator</a>
-            <a href="case_splittrap.html" data-i18n="menu.splittrap">The Split Trap</a>
-            <a href="recipe_potassium.html" data-i18n="menu.recipe_potassium">Recipe: Potassium Waterglass</a>
-            <a href="img/fake/Artificial granite secret recipe v3.0.pdf" target="_blank" data-i18n="menu.recipe_granite">Recipe: Fake granite (pdf)</a>
+            <a href="/" data-i18n="home">Home</a>
+            <a href="case_splittrap.html" data-i18n="splittrap">The Split Trap</a>
+            <a href="recipe_potassium.html" data-i18n="recipe1">Recipe: Potassium Waterglass</a>
+            <a href="img/fake/Artificial granite secret recipe v3.0.pdf" target="_blank" data-i18n="recipe2">Recipe: Fake granite (pdf)</a>
             </div>
         </div>
     </div>

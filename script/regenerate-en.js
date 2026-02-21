@@ -21,26 +21,21 @@ function findHtmlFiles(dir) {
   return out;
 }
 
-function stripHtml(txt) {
-  // remove script/style blocks
-  txt = txt.replace(/<script[\s\S]*?<\/script>/gi, '\n');
-  txt = txt.replace(/<style[\s\S]*?<\/style>/gi, '\n');
-  // remove comments
-  txt = txt.replace(/<!--([\s\S]*?)-->/g, '\n');
-  // replace tags with newlines
-  txt = txt.replace(/<[^>]+>/g, '\n');
-  // decode basic entities
-  txt = txt.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'");
-  return txt;
-}
-
-function extractStringsFromFile(filePath) {
+function extractI18nKeysAndValues(filePath) {
   const src = fs.readFileSync(filePath, 'utf8');
-  const stripped = stripHtml(src);
-  const lines = stripped.split(/\r?\n/).map(s => s.replace(/\s+/g, ' ').trim()).filter(Boolean);
-  // heuristics: keep lines with at least 1 char, avoid pure punctuation
-  const candidates = lines.filter(l => /[A-Za-z0-9\p{L}]/u.test(l));
-  return candidates;
+  // Only match elements where the value is not empty or whitespace
+  const regex = /data-i18n\s*=\s*"([^"]+)"[^>]*>([^<]*)/gi;
+  const matches = [];
+  let m;
+  while ((m = regex.exec(src)) !== null) {
+    const key = m[1].trim();
+    const value = m[2].replace(/\s+/g, ' ').trim();
+    // Only include if value is not empty and not just whitespace
+    if (key && value && value !== '' && !/^\s*$/.test(value)) {
+      matches.push({ key, value });
+    }
+  }
+  return matches;
 }
 
 function slugify(text, maxLen = 60) {
@@ -66,35 +61,25 @@ function main() {
   }
 
   const files = findHtmlFiles(ROOT);
-  const en = {};
   let total = 0;
-
+  const en = {};
   for (const f of files) {
     const rel = path.relative(ROOT, f).replace(/\\/g, '/');
     const page = path.basename(f, '.html');
-    const strs = extractStringsFromFile(f);
-    if (!strs.length) continue;
+    const pairs = extractI18nKeysAndValues(f);
+    if (!pairs.length) continue;
     en[page] = en[page] || {};
-    const usedKeys = new Set(Object.keys(en[page]));
-    for (const s of strs) {
-      // avoid adding very short noise (single punctuation)
-      if (s.length === 0) continue;
-      // dedupe identical strings in the same page
-      if (Object.values(en[page]).includes(s)) continue;
-      let base = slugify(s).substring(0, 50) || 'text';
-      // ensure key is not empty
-      if (!base) base = 'text';
-      let key = base;
-      let i = 1;
-      while (usedKeys.has(key)) {
-        i += 1;
-        key = `${base}_${i}`;
+    for (const { key, value } of pairs) {
+      if (!en[page][key]) {
+        en[page][key] = value;
+        total += 1;
       }
-      usedKeys.add(key);
-      en[page][key] = s;
-      total += 1;
     }
   }
+  fs.writeFileSync(OUT_PATH, JSON.stringify(en, null, 2) + '\n', 'utf8');
+  // write small report
+  fs.writeFileSync(path.join(TRANS_DIR, 'regenerate-report.json'), JSON.stringify({ filesScanned: files.length, totalKeys: total }, null, 2), 'utf8');
+  console.log(`Scanned ${files.length} HTML files — generated ${total} keys in ${OUT_PATH}`);
 
   // write en.json
   fs.writeFileSync(OUT_PATH, JSON.stringify(en, null, 2) + '\n', 'utf8');
